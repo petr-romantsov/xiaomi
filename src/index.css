@@ -1,0 +1,30 @@
+:root {
+  --white: #fff;
+  --pink: #c35ab8;
+  --violet: #352c5d;
+  --black: #1c1c1c;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'PTMono', 'IBM Plex Mono', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
