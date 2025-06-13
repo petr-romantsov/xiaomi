@@ -1,0 +1,9 @@
+.nav__item {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav__link {
+  font-size: 16px;
+}
