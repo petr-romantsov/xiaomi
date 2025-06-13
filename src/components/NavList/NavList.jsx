@@ -1,8 +1,9 @@
 import { NavLink } from '../navLink/navLink';
+import styles from './NavList.module.css';
 
 export const NavList = () => {
   return (
-    <ul>
+    <ul className={styles.nav__list}>
       <NavLink link={'#conception'} size={'sm'}>
         О КОЛЛАБОРАЦИИ
       </NavLink>
