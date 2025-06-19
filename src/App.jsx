@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Header />
-      <SectionTitle color={'pink'}>Коллекция</SectionTitle>
+      <SectionTitle color="pink">Коллекция</SectionTitle>
       <SectionTitle>Коллекция</SectionTitle>
     </div>
   );
