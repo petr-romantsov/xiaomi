@@ -1,12 +1,12 @@
 import { NavList } from '../NavList/NavList';
 import { XiaomiLogo } from '../XiaomiLogo/XiaomiLogo';
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
-export const Header = () => {
+export function Header() {
   return (
     <header className={styles.header}>
       <NavList />
       <XiaomiLogo />
     </header>
   );
-};
+}

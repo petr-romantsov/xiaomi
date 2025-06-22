@@ -1,7 +1,7 @@
-import styles from './SectionTitle.module.css';
 import { clsx } from 'clsx';
+import styles from './SectionTitle.module.scss';
 
-export const SectionTitle = ({ children, color }) => {
+export function SectionTitle({ children, color }) {
   return (
     <h3
       className={clsx(
@@ -12,4 +12,4 @@ export const SectionTitle = ({ children, color }) => {
       {children}
     </h3>
   );
-};
+}

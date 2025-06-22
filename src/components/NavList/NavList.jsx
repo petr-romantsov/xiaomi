@@ -1,18 +1,18 @@
-import { NavLink } from '../navLink/navLink';
-import styles from './NavList.module.css';
+import NavLink from '../NavLink/NavLink';
+import styles from './NavList.module.scss';
 
-export const NavList = () => {
+export function NavList() {
   return (
     <ul className={styles.nav__list}>
-      <NavLink link={'#conception'} size={'sm'}>
+      <NavLink link="#conception" size="sm">
         О КОЛЛАБОРАЦИИ
       </NavLink>
-      <NavLink link={'#series'} size={'sm'}>
+      <NavLink link="#series" size="sm">
         серия Mi 10T
       </NavLink>
-      <NavLink link={'#wherebuy'} size={'sm'}>
+      <NavLink link="#wherebuy" size="sm">
         ГДЕ КУПИТЬ
       </NavLink>
     </ul>
   );
-};
+}

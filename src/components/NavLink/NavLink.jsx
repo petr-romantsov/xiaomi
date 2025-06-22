@@ -1,4 +1,4 @@
-import styles from './NavLink.module.css';
+import styles from './NavLink.module.scss';
 
 function NavLink({ children, link, size }) {
   const linkClassName = styles[`nav__link--${size}`];

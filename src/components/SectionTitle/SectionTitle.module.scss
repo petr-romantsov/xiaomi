@@ -3,12 +3,12 @@
   line-height: 100%;
   font-weight: 400;
   text-transform: uppercase;
-}
 
-.section__title--pink {
-  color: var(--pink);
-}
+  &--pink {
+    color: var(--pink);
+  }
 
-.section__title--white {
-  color: var(--white);
+  &--white {
+    color: var(--white);
+  }
 }
