@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "preview": "vite preview",
     "stylelint": "stylelint **/*.scss",
-    "stylelint:fix": "stylelint **/*.scss --fix"
+    "stylelint:fix": "stylelint **/*.scss --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,10 +34,26 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.5.3",
     "sass": "^1.89.2",
     "stylelint": "^16.21.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "vite": "^6.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "lint:fix",
+      "format"
+    ],
+    "*.{scss}": [
+      "stylelint:fix"
+    ]
   }
 }
