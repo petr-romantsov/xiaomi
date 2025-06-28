@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
-    "stylelint": "stylelint **/*.scss",
+    "stylelint": "stylelint '**/*.scss'",
     "stylelint:fix": "stylelint **/*.scss --fix",
+    "test": "echo \"No tests specified\" && exit 0",
     "prepare": "husky"
   },
   "dependencies": {
@@ -48,12 +49,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "lint:fix",
-      "format"
+    "*{js,jsx}": [
+      "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+      "prettier --write ."
     ],
-    "*.{scss}": [
-      "stylelint:fix"
-    ]
+    "*.scss": "stylelint '**/*.scss'"
   }
 }
