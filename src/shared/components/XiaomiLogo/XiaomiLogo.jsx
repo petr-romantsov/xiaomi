@@ -1,5 +1,5 @@
-import miLogo from '../../images/MiLogo.png';
-import miLogoText from '../../images/XiaomiText.png';
+import miLogo from '../../../assets/images/MiLogo.png';
+import miLogoText from '../../../assets/images/XiaomiText.png';
 import styles from './XiaomiLogo.module.scss';
 
 export function XiaomiLogo() {

@@ -1,0 +1,28 @@
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+
+  &_size {
+    &_sm {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &_lg {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+
+  &_color {
+    &_pink {
+      color: var(--color-text-pink);
+    }
+
+    &_white {
+      color: var(--color-text-white);
+    }
+  }
+}
