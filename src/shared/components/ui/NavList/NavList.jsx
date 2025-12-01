@@ -1,4 +1,4 @@
-import NavLink from '../NavLink/NavLink';
+import { NavLink } from '@/shared/components/ui/NavLink/NavLink';
 import styles from './NavList.module.scss';
 
 export function NavList({ items }) {

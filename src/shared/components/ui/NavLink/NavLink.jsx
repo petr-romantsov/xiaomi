@@ -1,6 +1,6 @@
 import styles from './NavLink.module.scss';
 
-function NavLink({ children, link, size }) {
+export function NavLink({ children, link, size }) {
   const linkClassName = styles[`nav__link--${size}`];
 
   return (
@@ -9,5 +9,3 @@ function NavLink({ children, link, size }) {
     </a>
   );
 }
-
-export default NavLink;

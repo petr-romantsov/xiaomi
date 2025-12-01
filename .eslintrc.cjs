@@ -18,6 +18,15 @@ module.exports = {
   },
   settings: {
     react: { version: 'detect' },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'],
+          ['@styles', './src/styles'],
+        ],
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
   },
   rules: {
     'prettier/prettier': ['warn', { endOfLine: 'auto' }],

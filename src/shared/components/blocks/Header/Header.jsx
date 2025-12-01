@@ -1,7 +1,7 @@
-import { NavList } from '../../ui/NavList/NavList';
-import { XiaomiLogo } from '../../XiaomiLogo/XiaomiLogo';
+import { NavList } from '@/shared/components/ui/NavList/NavList';
+import { XiaomiLogo } from '@/shared/components/XiaomiLogo/XiaomiLogo';
+import navItems from '@/shared/constants/navItems';
 import styles from './Header.module.scss';
-import navItems from '../../../constants/navItems';
 
 export function Header() {
   return (
