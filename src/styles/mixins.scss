@@ -1,0 +1,129 @@
+@use 'sass:math';
+
+$dbreak: 2000px !default;
+
+@function r2f($val) {
+  @return math.div(math.round($val * 10000), 10000);
+}
+
+// функция для конвертации px в vw
+@function vw($px) {
+  @if $dbreak > 1999 {
+    $ratio: math.div($px, $dbreak);
+    $max_value: $ratio * 2000px;
+    @return calc($px / 1280 * 2000);
+  } @else {
+    @return r2f(math.div($px, $dbreak) * 100vw);
+  }
+}
+
+// Вспомогательная функция для генерации значения свойства из массива значений
+@function generate-value($vals) {
+  $result: ();
+  @each $val in $vals {
+    @if $val != null {
+      $result: append($result, vw($val), space);
+    }
+  }
+  @return $result;
+}
+
+@mixin w2000 {
+  $dbreak: 2000px !global;
+  @media (min-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin w1280 {
+  $dbreak: 1280px !global;
+  @media (min-width: 1280px) and (max-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin w1024 {
+  $dbreak: 1024px !global;
+  @media (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin w768 {
+  $dbreak: 768px !global;
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin w375 {
+  $dbreak: 375px !global;
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin all-breakpoints($property, $values...) {
+  @include w2000 {
+    #{$property}: generate-value($values);
+  }
+  @include w1280 {
+    #{$property}: generate-value($values);
+  }
+  @include w1024 {
+    #{$property}: generate-value($values);
+  }
+  @include w768 {
+    #{$property}: generate-value($values);
+  }
+  @include w375 {
+    #{$property}: generate-value($values);
+  }
+}
+
+// обрезка изображения
+@mixin containImg($objectFit: cover) {
+  width: 100%;
+  height: 100%;
+  object-fit: $objectFit;
+  object-position: center;
+}
+
+// очистка стилей для списка
+@mixin clearList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// очистка стилей для инпута
+@mixin clearInput {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+//очистка стилей для кнопки
+@mixin clearBtn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+// транзишены
+@mixin transit($tag...) {
+  transition-timing-function: ease-in-out;
+  transition-duration: 350ms;
+  transition-property: $tag;
+}
+
+// обрезка текста
+@mixin clamp($lines) {
+  overflow: hidden;
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
