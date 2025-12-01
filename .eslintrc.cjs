@@ -32,6 +32,7 @@ module.exports = {
     'prettier/prettier': ['warn', { endOfLine: 'auto' }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'react/function-component-definition': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
       'error',

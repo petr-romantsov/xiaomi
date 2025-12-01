@@ -1,0 +1,12 @@
+.videoContainer {
+  --container-width: 100%;
+  --container-height: 100%;
+
+  width: var(--container-width);
+  height: var(--container-height);
+  position: relative;
+}
+
+.video {
+  @include containImg(cover);
+}
