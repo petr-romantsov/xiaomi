@@ -1,5 +1,7 @@
 .logo {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: vw(9px);
+
+  @include all-breakpoints(gap, 9px);
 }

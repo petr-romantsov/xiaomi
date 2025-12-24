@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:list';
 
 $dbreak: 2000px !default;
 
@@ -9,8 +10,6 @@ $dbreak: 2000px !default;
 // функция для конвертации px в vw
 @function vw($px) {
   @if $dbreak > 1999 {
-    $ratio: math.div($px, $dbreak);
-    $max_value: $ratio * 2000px;
     @return calc($px / 1280 * 2000);
   } @else {
     @return r2f(math.div($px, $dbreak) * 100vw);
@@ -20,69 +19,87 @@ $dbreak: 2000px !default;
 // Вспомогательная функция для генерации значения свойства из массива значений
 @function generate-value($vals) {
   $result: ();
+
   @each $val in $vals {
-    @if $val != null {
-      $result: append($result, vw($val), space);
+    @if $val {
+      $result: list.append($result, vw($val), $separator: space);
     }
   }
+
   @return $result;
 }
 
 @mixin w2000 {
   $dbreak: 2000px !global;
-  @media (min-width: 2000px) {
+
+  @media (width >= 2000px) {
     @content;
   }
 }
 
 @mixin w1280 {
   $dbreak: 1280px !global;
-  @media (min-width: 1280px) and (max-width: 2000px) {
+
+  @media (width >= 1280px) and (width <= 2000px) {
     @content;
   }
 }
 
 @mixin w1024 {
   $dbreak: 1024px !global;
-  @media (max-width: 1279px) {
+
+  @media (width <= 1279px) {
     @content;
   }
 }
 
 @mixin w768 {
   $dbreak: 768px !global;
-  @media (max-width: 1023px) {
+
+  @media (width <= 1023px) {
     @content;
   }
 }
 
 @mixin w375 {
   $dbreak: 375px !global;
-  @media (max-width: 767px) {
+
+  @media (width <= 767px) {
     @content;
   }
+}
+
+@mixin container {
+  margin: 0 auto;
+  padding: 0 100px;
+  max-width: 1920px;
+  width: 100%;
 }
 
 @mixin all-breakpoints($property, $values...) {
   @include w2000 {
     #{$property}: generate-value($values);
   }
+
   @include w1280 {
     #{$property}: generate-value($values);
   }
+
   @include w1024 {
     #{$property}: generate-value($values);
   }
+
   @include w768 {
     #{$property}: generate-value($values);
   }
+
   @include w375 {
     #{$property}: generate-value($values);
   }
 }
 
 // обрезка изображения
-@mixin containImg($objectFit: cover) {
+@mixin contain-img($objectFit: cover) {
   width: 100%;
   height: 100%;
   object-fit: $objectFit;
@@ -90,22 +107,22 @@ $dbreak: 2000px !default;
 }
 
 // очистка стилей для списка
-@mixin clearList {
+@mixin clear-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 // очистка стилей для инпута
-@mixin clearInput {
+@mixin clear-input {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
 }
 
-//очистка стилей для кнопки
-@mixin clearBtn {
+// очистка стилей для кнопки
+@mixin clear-btn {
   padding: 0;
   margin: 0;
   border: 0;
@@ -123,7 +140,6 @@ $dbreak: 2000px !default;
 @mixin clamp($lines) {
   overflow: hidden;
   display: -webkit-box;
-
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $lines;
 }

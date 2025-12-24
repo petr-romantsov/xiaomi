@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+
+  @include container;
+
+  &__content {
+    position: relative;
+    top: vw(-83px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: vw(46px) vw(96px) vw(46px) vw(106px);
+    z-index: 1;
+
+    & > * {
+      z-index: 1;
+    }
+
+    @include all-breakpoints(top, -83px);
+    @include all-breakpoints(padding, 46px, 96px, 46px, 106px);
+
+    @include w375 {
+      padding: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('@/assets/images/hero/hero-bg-desk.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+  }
+
+  &__model {
+    position: absolute;
+    top: vw(-104px);
+    left: vw(106px);
+    z-index: 2;
+
+    @include all-breakpoints(top, -104px);
+    @include all-breakpoints(left, 106px);
+  }
+
+  &__modelImg {
+    @include contain-img(contain);
+  }
+
+  &__aytlo {
+    width: vw(148px);
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+
+    @include all-breakpoints(width, 148px);
+
+    @include w375 {
+      width: vw(112px);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: vw(30px);
+    width: vw(214px);
+
+    @include all-breakpoints(width, 214px);
+    @include all-breakpoints(gap, 30px);
+
+    @include w375 {
+      width: 100%;
+    }
+
+    &_first {
+      @include all-breakpoints(padding-bottom, 100px);
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    top: vw(-175px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include all-breakpoints(top, -175px);
+  }
+
+  &__phoneImg {
+    @include contain-img(contain);
+  }
+
+  &__link {
+    position: relative;
+    top: vw(80px);
+    font-weight: 700;
+    font-size: vw(14px);
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: vw(2px);
+    color: var(--color-text-pink);
+
+    @include all-breakpoints(text-underline-offset, 2px);
+    @include all-breakpoints(top, 80px);
+    @include all-breakpoints(font-size, 14px);
+
+    @include w375 {
+      font-size: vw(11px);
+    }
+  }
+}

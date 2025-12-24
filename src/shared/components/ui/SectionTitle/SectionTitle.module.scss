@@ -1,8 +1,14 @@
 .section__title {
-  font-size: 40px;
+  font-size: vw(40px);
   line-height: 100%;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include all-breakpoints(font-size, 40px);
+
+  @include w375 {
+    font-size: vw(30px);
+  }
 
   &--pink {
     color: var(--color-text-pink);

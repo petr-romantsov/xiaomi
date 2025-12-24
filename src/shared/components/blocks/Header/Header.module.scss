@@ -1,5 +1,57 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: end;
+  gap: vw(60px);
+  padding: vw(30px) vw(50px);
+  z-index: 1;
+
+  @include all-breakpoints(padding, 30px, 50px);
+
+  @include w2000 {
+    gap: vw(60px);
+  }
+
+  @include w1280 {
+    gap: vw(60px);
+  }
+
+  @include w1024 {
+    gap: vw(40px);
+  }
+
+  @include w768 {
+    gap: vw(40px);
+  }
+
+  @include w375 {
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    gap: vw(20px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include all-breakpoints(gap, 20px);
+
+    @include w375 {
+      gap: vw(10px);
+    }
+  }
+
+  &__link {
+    color: var(--color-text-white);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }

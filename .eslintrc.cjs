@@ -7,10 +7,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'airbnb',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'react-hooks', 'react-refresh', 'prettier', 'import'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -33,19 +33,37 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/function-component-definition': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: [
-          '**/vite.config.js',
-          '**/*.test.js',
-          '**/*.spec.js',
+          '**/*.test.{js,jsx,ts,tsx}',
+          '**/*.spec.{js,jsx,ts,tsx}',
           '**/scripts/**',
         ],
         optionalDependencies: false,
         peerDependencies: false,
       },
     ],
+    'no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
   },
+  overrides: [
+    {
+      files: ['vite.config.{js,ts,mjs,cjs}', '**/vite.config.{js,ts,mjs,cjs}'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 };

@@ -1,12 +1,12 @@
-import { Header } from './shared/components/blocks/Header/Header';
-
-import styles from './App.module.scss';
+import { FirstBlock, Header, Hero } from '@/shared/components';
 
 function App() {
   return (
-    <div className={styles.app}>
+    <>
       <Header />
-    </div>
+      <FirstBlock />
+      <Hero />
+    </>
   );
 }
 
