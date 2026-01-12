@@ -10,7 +10,12 @@ export const FirstBlock = () => {
       <VideoContainer
         className={styles.firstBlock__video}
         video={HeaderBgVideo}
-        videoOptions={{ isAutoPlay: true, isMuted: true, isLoop: true }}
+        videoOptions={{
+          isAutoPlay: true,
+          isMuted: true,
+          isLoop: true,
+          controlled: true,
+        }}
       />
       <div className={styles.firstBlock__content}>
         <h1 className={styles.firstBlock__title}>Xiaomi x Aytlo Creative</h1>
