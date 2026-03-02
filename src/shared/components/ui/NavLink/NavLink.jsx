@@ -6,10 +6,10 @@ export function NavLink({ children, link, size = 'md', className = '' }) {
   return (
     <a
       className={clsx(
-        styles.link,
+        styles.navLink,
         {
-          [styles.link_size_md]: size === 'md',
-          [styles.link_size_lg]: size === 'lg',
+          [styles.navLink_size_md]: size === 'md',
+          [styles.navLink_size_lg]: size === 'lg',
         },
         className
       )}

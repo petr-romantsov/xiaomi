@@ -23,7 +23,7 @@ export const FirstBlock = () => {
           <source
             srcSet={mainTitleMob}
             type="image/png"
-            media="(max-width: 768px)"
+            media="(max-width: 767px)"
           />
           <img
             className={styles.firstBlock__img}

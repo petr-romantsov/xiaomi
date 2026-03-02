@@ -1,7 +1,7 @@
 import modelImg from './hero/Mi10T.png';
 import aytlo from './hero/hero-aytlo.png';
 import phone from './hero/phone.png';
-import mainTitleMob from './main-title-mob.png';
+import mainTitleMob from './main-title-mob.svg';
 import mainTitle from './main-title.png';
 import PlayIcon from './svg/play-icon.svg?react';
 

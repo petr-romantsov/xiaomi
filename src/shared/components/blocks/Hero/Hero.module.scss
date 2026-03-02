@@ -19,8 +19,15 @@
     @include all-breakpoints(top, -83px);
     @include all-breakpoints(padding, 46px, 96px, 46px, 106px);
 
+    @include w768 {
+      padding: vw(46px) vw(15px);
+    }
+
     @include w375 {
       padding: 0;
+      padding-top: vw(380px);
+      top: unset;
+      flex-direction: column;
     }
 
     &::after {
@@ -32,6 +39,17 @@
       background-position: center;
       background-repeat: no-repeat;
       z-index: 0;
+
+      @include w375 {
+        background-image: url('@/assets/images/hero/hero-bg-mob.png');
+        bottom: unset;
+        top: vw(820px);
+        left: 50%;
+        right: unset;
+        transform: translateX(-50%);
+        width: vw(347px);
+        height: vw(534px);
+      }
     }
   }
 
@@ -43,6 +61,19 @@
 
     @include all-breakpoints(top, -104px);
     @include all-breakpoints(left, 106px);
+
+    @include w768 {
+      width: vw(320px);
+      top: vw(-35px);
+      left: vw(15px);
+    }
+
+    @include w375 {
+      width: vw(320px);
+      top: vw(245px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__modelImg {
@@ -72,7 +103,8 @@
     @include all-breakpoints(gap, 30px);
 
     @include w375 {
-      width: 100%;
+      width: vw(262px);
+      align-items: center;
     }
 
     &_first {
@@ -85,8 +117,25 @@
     top: vw(-175px);
     left: 50%;
     transform: translateX(-50%);
+    width: vw(420px);
+    height: auto;
 
     @include all-breakpoints(top, -175px);
+    @include all-breakpoints(width, 420px);
+
+    @include w768 {
+      top: vw(-90px);
+      width: vw(300px);
+    }
+
+    @include w375 {
+      width: vw(177px);
+      height: vw(276px);
+      top: vw(38px);
+      left: unset;
+      right: vw(-30px);
+      transform: unset;
+    }
   }
 
   &__phoneImg {
@@ -108,8 +157,17 @@
     @include all-breakpoints(top, 80px);
     @include all-breakpoints(font-size, 14px);
 
+    @include w768 {
+      top: vw(20px);
+    }
+
     @include w375 {
+      position: absolute;
       font-size: vw(11px);
+      top: vw(185px);
+      width: vw(64px);
+      text-align: end;
+      line-height: 130%;
     }
   }
 }

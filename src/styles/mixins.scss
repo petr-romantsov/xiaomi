@@ -32,7 +32,7 @@ $dbreak: 2000px !default;
 @mixin w2000 {
   $dbreak: 2000px !global;
 
-  @media (width >= 2000px) {
+  @media (min-width >= 2000px) {
     @content;
   }
 }
@@ -40,17 +40,11 @@ $dbreak: 2000px !default;
 @mixin w1280 {
   $dbreak: 1280px !global;
 
-  @media (width >= 1280px) and (width <= 2000px) {
+  @media (width >= 1024px) and (width <= 1999px) {
     @content;
   }
-}
 
-@mixin w1024 {
-  $dbreak: 1024px !global;
-
-  @media (width <= 1279px) {
-    @content;
-  }
+  $dbreak: 2000px !global;
 }
 
 @mixin w768 {
@@ -59,6 +53,8 @@ $dbreak: 2000px !default;
   @media (width <= 1023px) {
     @content;
   }
+
+  $dbreak: 2000px !global;
 }
 
 @mixin w375 {
@@ -67,13 +63,31 @@ $dbreak: 2000px !default;
   @media (width <= 767px) {
     @content;
   }
+
+  $dbreak: 2000px !global;
 }
 
 @mixin container {
   margin: 0 auto;
   padding: 0 100px;
-  max-width: 1920px;
+  max-width: 2000px;
   width: 100%;
+
+  @include w2000 {
+    padding: 0 vw(100px);
+  }
+
+  @include w1280 {
+    padding: 0 vw(100px);
+  }
+
+  @include w768 {
+    padding: 0 vw(40px);
+  }
+
+  @include w375 {
+    padding: 0 vw(30px);
+  }
 }
 
 @mixin all-breakpoints($property, $values...) {
@@ -82,10 +96,6 @@ $dbreak: 2000px !default;
   }
 
   @include w1280 {
-    #{$property}: generate-value($values);
-  }
-
-  @include w1024 {
     #{$property}: generate-value($values);
   }
 

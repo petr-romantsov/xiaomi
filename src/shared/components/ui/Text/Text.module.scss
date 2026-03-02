@@ -1,18 +1,18 @@
 .text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: vw(14px);
+  line-height: vw(18px);
   letter-spacing: 0;
 
   &_size {
     &_sm {
-      font-size: 12px;
-      line-height: 20px;
+      @include all-breakpoints(font-size, 12px);
+      @include all-breakpoints(line-height, 20px);
     }
 
     &_lg {
-      font-size: 17px;
-      line-height: 22px;
+      @include all-breakpoints(font-size, 17px);
+      @include all-breakpoints(line-height, 22px);
     }
   }
 

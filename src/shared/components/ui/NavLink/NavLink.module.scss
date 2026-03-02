@@ -1,8 +1,14 @@
 .navLink {
+  cursor: pointer;
+
   &_size_md {
     font-size: vw(16px);
 
     @include all-breakpoints(font-size, 16px);
+
+    @include w375 {
+      font-size: vw(14px);
+    }
   }
 
   &_size_lg {
