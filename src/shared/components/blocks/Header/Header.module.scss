@@ -1,41 +1,42 @@
 .header {
-  @include container;
-
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  padding: vw(30px) 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: vw(60px);
-  padding: vw(30px) vw(50px);
   z-index: 1;
 
-  @include all-breakpoints(padding, 30px, 50px);
-
-  @include w2000 {
-    gap: vw(60px);
-  }
-
-  @include w1280 {
-    gap: vw(60px);
-  }
-
-  // @include w1024 {
-  //   gap: vw(40px);
-  // }
-
-  @include w768 {
-    gap: vw(40px);
-  }
+  @include all-breakpoints(padding, 30px, 0);
 
   @include w375 {
     position: static;
     transform: unset;
-    justify-content: space-between;
-    padding: vw(30px) vw(25px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: vw(60px);
+
+    @include container;
+
+    @include w2000 {
+      gap: vw(60px);
+    }
+
+    @include w1280 {
+      gap: vw(60px);
+    }
+
+    @include w768 {
+      gap: vw(40px);
+    }
+
+    @include w375 {
+      justify-content: space-between;
+    }
   }
 
   &__list {

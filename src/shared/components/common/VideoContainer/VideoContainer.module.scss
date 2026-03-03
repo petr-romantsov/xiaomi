@@ -30,5 +30,14 @@
     &_visible {
       opacity: 1;
     }
+
+    &_size_sm {
+      @include w375 {
+        svg {
+          width: vw(34px);
+          height: vw(34px);
+        }
+      }
+    }
   }
 }

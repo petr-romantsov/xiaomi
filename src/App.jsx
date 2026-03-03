@@ -1,4 +1,4 @@
-import { FirstBlock, Header, Hero } from '@/shared/components';
+import { Concept, FirstBlock, Header, Hero } from '@/shared/components';
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <Header />
       <FirstBlock />
       <Hero />
+      <Concept />
     </>
   );
 }

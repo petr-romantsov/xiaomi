@@ -1,8 +1,8 @@
 .firstBlock {
-  @include container;
-
   position: relative;
   height: vw(661px);
+
+  @include container;
 
   @include w2000 {
     height: vw(661px);

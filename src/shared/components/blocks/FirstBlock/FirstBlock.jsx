@@ -14,7 +14,6 @@ export const FirstBlock = () => {
           isAutoPlay: true,
           isMuted: true,
           isLoop: true,
-          controlled: true,
         }}
       />
       <div className={styles.firstBlock__content}>

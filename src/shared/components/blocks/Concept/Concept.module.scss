@@ -1,0 +1,162 @@
+.concept {
+  position: relative;
+  top: vw(-110px);
+  z-index: 1;
+
+  @include container;
+
+  @include w2000 {
+    top: vw(-110px);
+  }
+
+  @include w1280 {
+    top: vw(-110px);
+  }
+
+  @include w768 {
+    top: vw(-50px);
+  }
+
+  @include w375 {
+    top: unset;
+    padding-top: vw(180px);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 vw(51px) 0 vw(105px);
+
+    @include w2000 {
+      padding: 0 vw(51px) 0 vw(105px);
+    }
+
+    @include w1280 {
+      padding: 0 vw(95px) 0 vw(105px);
+    }
+
+    @include w768 {
+      padding: 0;
+    }
+  }
+
+  &__descr {
+    width: vw(430px);
+    margin-right: vw(10px);
+    padding-bottom: vw(31px);
+
+    @include w2000 {
+      width: vw(430px);
+      margin-right: vw(10px);
+      padding-bottom: vw(31px);
+    }
+
+    @include w1280 {
+      width: vw(430px);
+      margin-right: vw(10px);
+      padding-bottom: vw(31px);
+    }
+
+    @include w768 {
+      width: vw(315px);
+      margin-right: vw(10px);
+      padding-bottom: 0;
+    }
+
+    @include w375 {
+      margin-right: 0;
+      width: vw(315px);
+      z-index: 1;
+    }
+  }
+
+  &__text:nth-of-type(1) {
+    margin-bottom: vw(30px);
+
+    @include all-breakpoints(margin-bottom, 30px);
+  }
+
+  &__title {
+    margin-bottom: vw(20px);
+
+    @include w2000 {
+      margin-bottom: vw(20px);
+    }
+
+    @include w1280 {
+      margin-bottom: vw(10px);
+    }
+
+    @include w768 {
+      margin-bottom: vw(10px);
+    }
+
+    @include w375 {
+      margin-bottom: vw(15px);
+    }
+  }
+
+  &__letterA {
+    width: vw(182px);
+    height: vw(226px);
+    margin-right: vw(30px);
+
+    @include w2000 {
+      width: vw(182px);
+      height: vw(226px);
+      margin-right: vw(30px);
+    }
+
+    @include w1280 {
+      width: vw(182px);
+      height: vw(226px);
+      margin-right: vw(23px);
+    }
+
+    @include w768 {
+      width: vw(182px);
+      height: vw(226px);
+      margin-right: vw(20px);
+    }
+
+    @include w375 {
+      display: none;
+    }
+  }
+
+  &__video {
+    width: vw(216px);
+    height: vw(449px);
+
+    @include w2000 {
+      width: vw(216px);
+      height: vw(449px);
+    }
+
+    @include w1280 {
+      width: vw(214px);
+      height: vw(421px);
+    }
+
+    @include w768 {
+      width: vw(214px);
+      height: vw(421px);
+      top: vw(-145px);
+      right: vw(10px);
+    }
+
+    @include w375 {
+      position: absolute;
+      width: vw(157px);
+      height: vw(320px);
+      right: 0;
+      top: vw(30px);
+    }
+
+    button {
+      @include w375 {
+        z-index: 2;
+      }
+    }
+  }
+}

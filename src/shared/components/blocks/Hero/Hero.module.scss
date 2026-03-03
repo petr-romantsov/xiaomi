@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: vw(46px) vw(96px) vw(46px) vw(106px);
+    padding: vw(46px) vw(96px) vw(113px) vw(106px);
     z-index: 1;
 
     & > * {
@@ -17,10 +17,10 @@
     }
 
     @include all-breakpoints(top, -83px);
-    @include all-breakpoints(padding, 46px, 96px, 46px, 106px);
+    @include all-breakpoints(padding, 46px, 96px, 118px, 106px);
 
     @include w768 {
-      padding: vw(46px) vw(15px);
+      padding: vw(46px) vw(15px) vw(100px);
     }
 
     @include w375 {
@@ -43,7 +43,7 @@
       @include w375 {
         background-image: url('@/assets/images/hero/hero-bg-mob.png');
         bottom: unset;
-        top: vw(820px);
+        top: vw(725px);
         left: 50%;
         right: unset;
         transform: translateX(-50%);
@@ -56,11 +56,20 @@
   &__model {
     position: absolute;
     top: vw(-104px);
-    left: vw(106px);
+    left: vw(147px);
+    width: vw(417px);
     z-index: 2;
 
     @include all-breakpoints(top, -104px);
     @include all-breakpoints(left, 106px);
+
+    @include w2000 {
+      width: vw(417px);
+    }
+
+    @include w1280 {
+      width: vw(417px);
+    }
 
     @include w768 {
       width: vw(320px);
@@ -97,9 +106,9 @@
     display: flex;
     flex-direction: column;
     gap: vw(30px);
-    width: vw(214px);
+    width: vw(216px);
 
-    @include all-breakpoints(width, 214px);
+    @include all-breakpoints(width, 216px);
     @include all-breakpoints(gap, 30px);
 
     @include w375 {
@@ -109,6 +118,10 @@
 
     &_first {
       @include all-breakpoints(padding-bottom, 100px);
+
+      @include w768 {
+        padding-bottom: vw(35px);
+      }
     }
   }
 
@@ -152,6 +165,7 @@
     text-decoration-skip-ink: none;
     text-underline-offset: vw(2px);
     color: var(--color-text-pink);
+    cursor: pointer;
 
     @include all-breakpoints(text-underline-offset, 2px);
     @include all-breakpoints(top, 80px);

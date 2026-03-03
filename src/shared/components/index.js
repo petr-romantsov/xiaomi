@@ -6,3 +6,4 @@ export * from './blocks/Header/Header';
 export * from './common/VideoContainer/VideoContainer';
 export * from './blocks/FirstBlock/FirstBlock';
 export * from './blocks/Hero/Hero';
+export * from './blocks/Concept/Concept';
