@@ -25,6 +25,7 @@
   &__content {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     padding: 0 vw(51px) 0 vw(105px);
 
     @include w2000 {

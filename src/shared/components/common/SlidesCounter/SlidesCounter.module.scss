@@ -1,0 +1,8 @@
+.slidesCounter {
+  font-family: var(--font-family-pt-mono);
+  font-size: vw(10px);
+  font-weight: 700;
+  color: var(--color-text-white);
+
+  @include all-breakpoints(font-size, 10px);
+}

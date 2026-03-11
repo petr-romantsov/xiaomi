@@ -2,12 +2,7 @@ import clsx from 'clsx';
 
 import styles from './Text.module.scss';
 
-export function Text({
-  children,
-  size = 'sm',
-  color = 'white',
-  className = '',
-}) {
+export function Text({ children, size, color = 'white', className = '' }) {
   return (
     <p
       className={clsx(

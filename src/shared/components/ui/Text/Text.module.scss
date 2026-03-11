@@ -4,6 +4,9 @@
   line-height: vw(18px);
   letter-spacing: 0;
 
+  @include all-breakpoints(font-size, 14px);
+  @include all-breakpoints(line-height, 18px);
+
   &_size {
     &_sm {
       @include all-breakpoints(font-size, 12px);

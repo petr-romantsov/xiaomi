@@ -1,0 +1,33 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include container;
+
+  &__tabsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: vw(10px);
+    width: vw(468px);
+
+    @include all-breakpoints(gap, 10px);
+    @include all-breakpoints(width, 468px);
+
+    @include w375 {
+      width: vw(234px);
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    gap: vw(15px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include all-breakpoints(gap, 15px);
+  }
+}

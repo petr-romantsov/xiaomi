@@ -1,0 +1,58 @@
+.buttonTab {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-white);
+  font-family: var(--font-family-pt-mono);
+  font-weight: 700;
+  font-size: vw(18px);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+  }
+
+  @include all-breakpoints(font-size, 18px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: vw(-2px);
+    width: 100%;
+    height: vw(1px);
+    background-color: var(--color-text-white);
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+
+    @include all-breakpoints(height, 1px);
+    @include all-breakpoints(bottom, -2px);
+  }
+
+  &_active {
+    &::after {
+      height: vw(8px);
+      bottom: vw(-4px);
+      background-color: var(--color-text-pink);
+
+      @include all-breakpoints(height, 8px);
+      @include all-breakpoints(bottom, -4px);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

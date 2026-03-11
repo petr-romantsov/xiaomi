@@ -1,5 +1,5 @@
 import { mainTitle, mainTitleMob } from '@/assets/images';
-import { HeaderBgVideo } from '@/assets/videos';
+import { headerBgVideo } from '@/assets/videos';
 import { Text, VideoContainer } from '@/shared/components';
 
 import styles from './FirstBlock.module.scss';
@@ -9,7 +9,7 @@ export const FirstBlock = () => {
     <section className={styles.firstBlock}>
       <VideoContainer
         className={styles.firstBlock__video}
-        video={HeaderBgVideo}
+        video={headerBgVideo}
         videoOptions={{
           isAutoPlay: true,
           isMuted: true,

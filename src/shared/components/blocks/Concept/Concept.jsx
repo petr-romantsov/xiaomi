@@ -1,5 +1,5 @@
 import { letterA } from '@/assets/images';
-import { ConceptVideo } from '@/assets/videos';
+import { conceptVideo } from '@/assets/videos';
 import { SectionTitle, Text, VideoContainer } from '@/shared/components';
 import { texts } from '@/shared/constants';
 
@@ -13,10 +13,10 @@ export const Concept = () => {
           <SectionTitle className={styles.concept__title} color="pink">
             КОНЦЕПЦИЯ
           </SectionTitle>
-          <Text className={styles.concept__text}>
+          <Text size="sm" className={styles.concept__text}>
             {texts.CONCEPT_FIRST_PARAGRAPH}
           </Text>
-          <Text className={styles.concept__text}>
+          <Text size="sm" className={styles.concept__text}>
             {texts.CONCEPT_SECOND_PARAGRAPH}
           </Text>
         </div>
@@ -24,7 +24,7 @@ export const Concept = () => {
           <img src={letterA} alt="letter A" />
         </div>
         <VideoContainer
-          video={ConceptVideo}
+          video={conceptVideo}
           videoOptions={{
             controlled: true,
             smallPlayBtn: true,

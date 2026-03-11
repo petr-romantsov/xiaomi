@@ -14,8 +14,8 @@ export const Hero = () => {
           <img className={styles.hero__modelImg} src={modelImg} alt="Mi 10T" />
         </div>
         <div className={clsx(styles.hero__text, styles.hero__text_first)}>
-          <Text>{texts.HERO_FIRST_PARAGRAPH}</Text>
-          <Text>{texts.HERO_SECOND_PARAGRAPH}</Text>
+          <Text size="sm">{texts.HERO_FIRST_PARAGRAPH}</Text>
+          <Text size="sm">{texts.HERO_SECOND_PARAGRAPH}</Text>
         </div>
         <div className={styles.hero__phone}>
           <img

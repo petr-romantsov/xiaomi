@@ -1,0 +1,37 @@
+.buttonNext {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  font-family: var(--font-family-pt-mono);
+  font-size: vw(16px);
+  font-weight: 700;
+  color: var(--color-text-white);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: vw(4px);
+  cursor: pointer;
+
+  @include all-breakpoints(font-size, 16px);
+  @include all-breakpoints(text-underline-offset, 4px);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        transform: scaleX(1.08);
+      }
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+}
