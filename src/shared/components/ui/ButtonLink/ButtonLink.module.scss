@@ -1,0 +1,28 @@
+.buttonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: vw(27px);
+  border: 1px solid var(--color-text-pink);
+  border-radius: vw(10px);
+  text-align: center;
+  font-family: var(--font-family-pt-mono);
+  font-weight: 700;
+  font-size: vw(15px);
+  color: var(--color-text-white);
+  transition: border-color 0.3s ease-in-out;
+
+  @include all-breakpoints(padding, 27px);
+  @include all-breakpoints(border-radius, 10px);
+  @include all-breakpoints(font-size, 15px);
+
+  @include w375 {
+    padding: vw(20px);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: var(--color-text-white);
+    }
+  }
+}

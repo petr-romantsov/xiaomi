@@ -2,6 +2,7 @@ import {
   Concept,
   Filters,
   FirstBlock,
+  Footer,
   Header,
   Hero,
 } from '@/shared/components';
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Concept />
       <Filters />
+      <Footer />
     </>
   );
 }
