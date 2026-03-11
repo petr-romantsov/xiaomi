@@ -123,14 +123,6 @@ $dbreak: 2000px !default;
   list-style: none;
 }
 
-// очистка стилей для инпута
-@mixin clear-input {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-}
-
 // очистка стилей для кнопки
 @mixin clear-btn {
   padding: 0;

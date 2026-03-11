@@ -1,0 +1,88 @@
+.footer {
+  @include container;
+
+  &__content {
+    padding: vw(90px) 0 vw(190px);
+    width: vw(854px);
+    margin: 0 auto;
+
+    @include all-breakpoints(width, 854px);
+    @include all-breakpoints(padding, 90px, 0, 190px);
+
+    @include w768 {
+      width: 100%;
+    }
+
+    @include w375 {
+      padding: vw(56px) 0 vw(100px);
+    }
+  }
+
+  &__title {
+    margin-bottom: vw(32px);
+
+    @include all-breakpoints(margin-bottom, 32px);
+
+    @include w375 {
+      margin-bottom: vw(10px);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: vw(25px);
+    margin-bottom: vw(47px);
+    max-width: vw(615px);
+
+    @include all-breakpoints(gap, 25px);
+    @include all-breakpoints(margin-bottom, 47px);
+    @include all-breakpoints(max-width, 615px);
+
+    @include w375 {
+      gap: vw(12px);
+      margin-bottom: vw(30px);
+      max-width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: vw(24px);
+    margin-bottom: vw(90px);
+
+    @include all-breakpoints(gap, 24px);
+    @include all-breakpoints(margin-bottom, 90px);
+
+    @include w375 {
+      flex-direction: column;
+      gap: vw(16px);
+      margin-bottom: vw(40px);
+    }
+  }
+
+  &__link {
+    width: calc(50% - (vw(25px) / 2));
+
+    @include w375 {
+      width: 100%;
+    }
+  }
+
+  &__socialLinks {
+    display: flex;
+    gap: vw(16px);
+    width: 100%;
+    flex-wrap: wrap;
+    padding: vw(20px) 0;
+
+    @include all-breakpoints(padding, 20px, 0);
+    @include all-breakpoints(gap, 16px);
+  }
+
+  &__copy {
+    margin-top: vw(20px);
+
+    @include all-breakpoints(margin-top, 20px);
+  }
+}

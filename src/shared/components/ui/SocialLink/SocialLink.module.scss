@@ -1,0 +1,21 @@
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-pink);
+  transition: color 0.3s ease-in-out;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--color-text-white);
+    }
+  }
+
+  svg {
+    width: vw(32px);
+    height: vw(32px);
+
+    @include all-breakpoints(width, 32px);
+    @include all-breakpoints(height, 32px);
+  }
+}
