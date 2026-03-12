@@ -31,7 +31,9 @@
     background-color: var(--color-text-white);
     transform: scaleX(1);
     transform-origin: center;
-    transition: transform 0.3s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      height 0.3s ease-in-out;
 
     @include all-breakpoints(height, 1px);
     @include all-breakpoints(bottom, -2px);

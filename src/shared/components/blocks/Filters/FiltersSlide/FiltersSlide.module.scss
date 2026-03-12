@@ -1,13 +1,11 @@
 .filtersSlide {
   position: relative;
-  top: vw(-60px);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
+  height: 100%;
   padding: 0 vw(51px) 0 vw(105px);
-
-  @include all-breakpoints(top, -60px);
 
   @include w2000 {
     padding: 0 vw(51px) 0 vw(105px);
@@ -56,17 +54,13 @@
     }
   }
 
-  &__rightBlock {
-    display: flex;
-    flex-direction: column;
-    gap: vw(15px);
-
-    @include all-breakpoints(gap, 15px);
-  }
-
   &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: vw(168px);
     height: vw(332px);
+    align-self: flex-start;
 
     @include all-breakpoints(width, 168px);
     @include all-breakpoints(height, 332px);
@@ -74,18 +68,6 @@
     @include w375 {
       width: vw(136px);
       height: vw(269px);
-    }
-  }
-
-  &__slideControls {
-    display: flex;
-    flex-direction: column;
-    gap: vw(52px);
-
-    @include all-breakpoints(gap, 52px);
-
-    @include w375 {
-      gap: vw(17px);
     }
   }
 }

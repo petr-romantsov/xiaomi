@@ -1,12 +1,7 @@
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 
-import {
-  ButtonNext,
-  SlidesCounter,
-  Text,
-  VideoContainer,
-} from '@/shared/components';
+import { Text, VideoContainer } from '@/shared/components';
 
 import styles from './FiltersSlide.module.scss';
 
@@ -16,15 +11,21 @@ export const FiltersSlide = ({
   image,
   imageAlt,
   className,
-  currentSlideNumber,
-  slidesTotalCount,
-  onNextSlide,
+  isSlideChanging,
+  onSlideChangingComplete,
 }) => {
+  const handleAnimationComplete = () => {
+    if (isSlideChanging) {
+      onSlideChangingComplete();
+    }
+  };
+
   return (
     <div className={clsx(styles.filtersSlide, className)}>
       <motion.div
-        initial={{ scaleX: 1 }}
-        exit={{ scaleX: 0 }}
+        initial={{ scaleX: 0, transformOrigin: 'right' }}
+        animate={{ scaleX: isSlideChanging ? 0 : 1, transformOrigin: 'left' }}
+        transition={{ duration: 0.4 }}
         className={styles.filtersSlide__leftBlock}
       >
         <VideoContainer
@@ -36,22 +37,15 @@ export const FiltersSlide = ({
           {videoDescription}
         </Text>
       </motion.div>
-      <div className={styles.filtersSlide__rightBlock}>
-        <motion.div
-          initial={{ scaleX: 1 }}
-          exit={{ scaleX: 0 }}
-          className={styles.filtersSlide__image}
-        >
-          <img src={image} alt={imageAlt} />
-        </motion.div>
-        <div className={styles.filtersSlide__slideControls}>
-          <SlidesCounter
-            currentSlide={currentSlideNumber}
-            totalSlides={slidesTotalCount}
-          />
-          <ButtonNext onClick={onNextSlide}>Следующий фильтр</ButtonNext>
-        </div>
-      </div>
+      <motion.div
+        initial={{ scaleX: 0, transformOrigin: 'right' }}
+        animate={{ scaleX: isSlideChanging ? 0 : 1, transformOrigin: 'left' }}
+        transition={{ duration: 0.4 }}
+        onAnimationComplete={handleAnimationComplete}
+        className={styles.filtersSlide__image}
+      >
+        <img src={image} alt={imageAlt} />
+      </motion.div>
     </div>
   );
 };

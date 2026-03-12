@@ -12,7 +12,7 @@ const transition = {
 const sliderVariants = {
   enter: {
     x: 300,
-    opacity: 0,
+    // opacity: 0,
     transition: {
       ...transition,
       when: 'beforeChildren',
@@ -20,11 +20,11 @@ const sliderVariants = {
   },
   center: {
     x: 0,
-    opacity: 1,
+    // opacity: 1,
   },
   exit: {
     x: -300,
-    opacity: 0,
+    // opacity: 0,
     transition: {
       ...transition,
       when: 'afterChildren',
@@ -32,7 +32,7 @@ const sliderVariants = {
   },
 };
 
-export const Slider = ({ children, activeIndex, onSlideChange }) => {
+export const Slider = ({ children, activeIndex }) => {
   const [prevIndex, setPrevIndex] = useState(activeIndex);
   const slides = Children.toArray(children);
 

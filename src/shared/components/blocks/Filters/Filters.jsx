@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import {
   ButtonTab,
   FiltersSlide,
   SectionTitle,
   Slider,
+  SliderControls,
 } from '@/shared/components';
 import { filtersData } from '@/shared/constants';
 
@@ -14,11 +15,19 @@ const getCurrentSlideNumber = (index) => index + 1;
 
 export const Filters = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isSlideChanging, setIsSlideChanging] = useState(false);
+  const [nextSlideIndex, setNextSlideIndex] = useState(0);
   const filtersTabs = filtersData.map((filter) => filter.title);
 
-  const handleNextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % filtersData.length);
-  };
+  const handleNextSlide = useCallback(() => {
+    setNextSlideIndex((activeIndex + 1) % filtersTabs.length);
+    setIsSlideChanging(true);
+  }, [activeIndex, filtersTabs]);
+
+  const onSlideChangingComplete = useCallback(() => {
+    setActiveIndex(nextSlideIndex);
+    setIsSlideChanging(false);
+  }, [nextSlideIndex]);
 
   return (
     <section className={styles.filters}>
@@ -42,17 +51,29 @@ export const Filters = () => {
               })}
             </ul>
           </div>
-          <Slider activeIndex={activeIndex}>
+          <Slider
+            activeIndex={activeIndex}
+            onNextSlide={handleNextSlide}
+            className={styles.filters__slider}
+          >
             {filtersData.map((slide, index) => (
               <FiltersSlide
                 key={slide.title}
-                currentSlideNumber={getCurrentSlideNumber(index)}
-                slidesTotalCount={filtersData.length}
                 onNextSlide={handleNextSlide}
+                isSlideChanging={isSlideChanging}
+                onSlideChangingComplete={onSlideChangingComplete}
                 {...slide}
               />
             ))}
           </Slider>
+          <SliderControls
+            withCounter
+            currentSlideNumber={getCurrentSlideNumber(activeIndex)}
+            slidesTotalCount={filtersData.length}
+            onNextSlide={handleNextSlide}
+            nextButtonText="Следующий слайд"
+            className={styles.filters__sliderControls}
+          />
         </>
       )}
     </section>

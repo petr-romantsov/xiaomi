@@ -15,3 +15,4 @@ export * from './blocks/Concept/Concept';
 export * from './blocks/Filters/Filters';
 export * from './blocks/Filters/FiltersSlide/FiltersSlide';
 export * from './blocks/Footer/Footer';
+export * from './common/SliderControls/SliderControls';

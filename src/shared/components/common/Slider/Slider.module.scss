@@ -1,10 +1,9 @@
 .slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  height: vw(480px);
+  height: vw(500px);
 
-  @include all-breakpoints(height, 480px);
+  @include all-breakpoints(height, 500px);
 
   &__slide {
     position: absolute;

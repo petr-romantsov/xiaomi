@@ -1,0 +1,12 @@
+.sliderControls {
+  display: flex;
+  flex-direction: column;
+  gap: vw(52px);
+
+  @include all-breakpoints(gap, 52px);
+  @include all-breakpoints(right, 20px);
+
+  @include w375 {
+    gap: vw(17px);
+  }
+}
