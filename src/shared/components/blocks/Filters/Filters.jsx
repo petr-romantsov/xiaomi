@@ -1,9 +1,11 @@
 import { useCallback, useState } from 'react';
 
+import { useMediaQuery } from '@/hooks';
 import {
   ButtonTab,
   FiltersSlide,
   SectionTitle,
+  SlideBackgroundText,
   Slider,
   SliderControls,
 } from '@/shared/components';
@@ -17,7 +19,11 @@ export const Filters = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isSlideChanging, setIsSlideChanging] = useState(false);
   const [nextSlideIndex, setNextSlideIndex] = useState(0);
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   const filtersTabs = filtersData.map((filter) => filter.title);
+  const textForBackground = filtersData[activeIndex].title;
+  const backgroundImg = filtersData[activeIndex].backgroundImg;
 
   const handleNextSlide = useCallback(() => {
     setNextSlideIndex((activeIndex + 1) % filtersTabs.length);
@@ -28,6 +34,13 @@ export const Filters = () => {
     setActiveIndex(nextSlideIndex);
     setIsSlideChanging(false);
   }, [nextSlideIndex]);
+
+  const handleTabClick = (index) => {
+    if (index === activeIndex) return;
+    if (isSlideChanging) return;
+    setNextSlideIndex(index);
+    setIsSlideChanging(true);
+  };
 
   return (
     <section className={styles.filters}>
@@ -41,7 +54,7 @@ export const Filters = () => {
                 return (
                   <li key={filter}>
                     <ButtonTab
-                      onClick={() => setActiveIndex(index)}
+                      onClick={() => handleTabClick(index)}
                       isActive={activeIndex === index}
                     >
                       {filter}
@@ -51,12 +64,18 @@ export const Filters = () => {
               })}
             </ul>
           </div>
+          {!isMobile && (
+            <SlideBackgroundText
+              text={textForBackground}
+              backImg={backgroundImg}
+            />
+          )}
           <Slider
             activeIndex={activeIndex}
             onNextSlide={handleNextSlide}
             className={styles.filters__slider}
           >
-            {filtersData.map((slide, index) => (
+            {filtersData.map((slide) => (
               <FiltersSlide
                 key={slide.title}
                 onNextSlide={handleNextSlide}

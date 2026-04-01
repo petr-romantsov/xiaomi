@@ -19,6 +19,11 @@
     padding: 0;
   }
 
+  @include w375 {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__leftBlock {
     display: flex;
     flex-direction: column;
@@ -38,8 +43,13 @@
     @include all-breakpoints(width, 443px);
     @include all-breakpoints(height, 301px);
 
+    @include w768 {
+      width: vw(375px);
+      height: vw(255px);
+    }
+
     @include w375 {
-      width: 100vw;
+      width: vw(375px);
       height: vw(255px);
     }
   }
@@ -50,7 +60,8 @@
     @include all-breakpoints(width, 227px);
 
     @include w375 {
-      width: vw(154px);
+      width: vw(175px);
+      padding-left: vw(30px);
     }
   }
 
@@ -65,7 +76,15 @@
     @include all-breakpoints(width, 168px);
     @include all-breakpoints(height, 332px);
 
+    @include w768 {
+      width: vw(136px);
+      height: vw(269px);
+    }
+
     @include w375 {
+      position: absolute;
+      right: vw(-30px);
+      top: vw(215px);
       width: vw(136px);
       height: vw(269px);
     }

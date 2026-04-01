@@ -6,6 +6,11 @@
 
   @include container;
 
+  @include w375 {
+    padding-top: vw(90px);
+    align-items: flex-start;
+  }
+
   &__tabsWrapper {
     display: flex;
     flex-direction: column;
@@ -19,6 +24,9 @@
     @include all-breakpoints(width, 468px);
 
     @include w375 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: vw(22px);
       width: vw(234px);
     }
   }
@@ -31,22 +39,50 @@
     list-style: none;
 
     @include all-breakpoints(gap, 15px);
+
+    @include w375 {
+      flex-direction: column;
+      gap: vw(10px);
+    }
   }
 
   &__slider {
-    top: vw(-60px);
     z-index: 0;
+    height: vw(500px);
+    top: vw(-60px);
 
     @include all-breakpoints(top, -60px);
     @include all-breakpoints(height, 500px);
+
+    @include w375 {
+      height: vw(485px);
+
+      // position: absolute;
+      // top: vw(82.5px);
+      // left: 0;
+      // width: vw(375px);
+    }
   }
 
   &__sliderControls {
     position: absolute;
-    right: vw(200px);
     bottom: vw(105px);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: vw(213px);
 
-    @include all-breakpoints(right, 200px);
+    @include all-breakpoints(padding-right, 213px);
     @include all-breakpoints(bottom, 105px);
+
+    @include w768 {
+      padding-right: vw(40px);
+    }
+
+    @include w375 {
+      padding-right: 0;
+      bottom: 0;
+      justify-content: flex-start;
+    }
   }
 }

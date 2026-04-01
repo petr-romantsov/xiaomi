@@ -1,8 +1,12 @@
 import letterA from './concept/concept-A-letter.png';
+import blackiceBack from './filters/blackice-back.avif';
+import colorFocusBack from './filters/colorfocus-back.avif';
+import cyberpunkBack from './filters/cyberpunk-back.avif';
 import filtersImage1 from './filters/filtersImg1.png';
 import filtersImage2 from './filters/filtersImg2.png';
 import filtersImage3 from './filters/filtersImg3.png';
 import filtersImage4 from './filters/filtersImg4.png';
+import goldvibesBack from './filters/gold-vibes-back.avif';
 import mainTitleMob from './firstblock/main-title-mob.svg';
 import mainTitle from './firstblock/main-title.png';
 import modelImg from './hero/Mi10T.png';
@@ -16,6 +20,7 @@ import VkIcon from './svg/vk.svg?react';
 
 export {
   PlayIcon,
+  colorFocusBack,
   mainTitleMob,
   mainTitle,
   modelImg,
@@ -30,4 +35,7 @@ export {
   VkIcon,
   TiktokIcon,
   MiIcon,
+  cyberpunkBack,
+  blackiceBack,
+  goldvibesBack,
 };

@@ -14,13 +14,15 @@ export const SliderControls = ({
 }) => {
   return (
     <div className={clsx(styles.sliderControls, className)}>
-      {withCounter && (
-        <SlidesCounter
-          currentSlide={currentSlideNumber}
-          totalSlides={slidesTotalCount}
-        />
-      )}
-      <ButtonNext onClick={onNextSlide}>{nextButtonText}</ButtonNext>
+      <div className={styles.sliderControls__inner}>
+        {withCounter && (
+          <SlidesCounter
+            currentSlide={currentSlideNumber}
+            totalSlides={slidesTotalCount}
+          />
+        )}
+        <ButtonNext onClick={onNextSlide}>{nextButtonText}</ButtonNext>
+      </div>
     </div>
   );
 };

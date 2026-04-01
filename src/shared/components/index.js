@@ -16,3 +16,4 @@ export * from './blocks/Filters/Filters';
 export * from './blocks/Filters/FiltersSlide/FiltersSlide';
 export * from './blocks/Footer/Footer';
 export * from './common/SliderControls/SliderControls';
+export * from './blocks/Filters/SlideBackgroundText/SlideBAckgroundText';

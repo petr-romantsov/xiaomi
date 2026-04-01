@@ -9,7 +9,11 @@ $dbreak: 2000px !default;
 
 // функция для конвертации px в vw
 @function vw($px) {
-  @if $dbreak > 1999 {
+  @if $px == 0 or $px == 0 {
+    @return 0;
+  }
+
+  @if $dbreak > 1999px {
     @return calc($px / 1280 * 2000);
   } @else {
     @return r2f(math.div($px, $dbreak) * 100vw);

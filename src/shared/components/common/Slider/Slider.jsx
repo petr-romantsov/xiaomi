@@ -1,5 +1,6 @@
 import { Children, useState } from 'react';
 
+import clsx from 'clsx';
 import { AnimatePresence, easeInOut, motion } from 'motion/react';
 
 import styles from './Slider.module.scss';
@@ -32,7 +33,7 @@ const sliderVariants = {
   },
 };
 
-export const Slider = ({ children, activeIndex }) => {
+export const Slider = ({ children, activeIndex, className }) => {
   const [prevIndex, setPrevIndex] = useState(activeIndex);
   const slides = Children.toArray(children);
 
@@ -41,7 +42,7 @@ export const Slider = ({ children, activeIndex }) => {
   }
 
   return (
-    <div className={styles.slider}>
+    <div className={clsx(styles.slider, className)}>
       <AnimatePresence initial={false}>
         <motion.div
           className={styles.slider__slide}

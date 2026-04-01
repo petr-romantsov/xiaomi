@@ -1,0 +1,55 @@
+.slideBackgroundText {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50%, calc(-50% - vw(60px)));
+  z-index: 0;
+  letter-spacing: -7%;
+
+  @include w2000 {
+    transform: translate(-50%, calc(-50% - vw(60px)));
+  }
+
+  @include w1280 {
+    transform: translate(-50%, calc(-50% - vw(60px)));
+  }
+
+  @include w768 {
+    transform: translate(-50%, calc(-50% - vw(60px)));
+  }
+
+  @include w375 {
+    display: none;
+  }
+
+  &__letter {
+    font-family: var(--font-family-drone-ranger-pro);
+    font-size: vw(280px);
+    line-height: 100%;
+    font-weight: 700;
+    color: transparent;
+    overflow: hidden;
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: text;
+
+    @include w2000 {
+      font-size: vw(280px);
+    }
+
+    @include w1280 {
+      font-size: vw(280px);
+    }
+
+    @include w768 {
+      font-size: vw(200px);
+      letter-spacing: 0;
+    }
+  }
+}
