@@ -68,6 +68,7 @@ export const Filters = () => {
             <SlideBackgroundText
               text={textForBackground}
               backImg={backgroundImg}
+              activeSlide={activeIndex}
             />
           )}
           <Slider
