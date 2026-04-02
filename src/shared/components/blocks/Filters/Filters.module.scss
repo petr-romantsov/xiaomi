@@ -31,6 +31,19 @@
     }
   }
 
+  &__title {
+    display: flex;
+
+    span {
+      display: none;
+
+      @include w375 {
+        display: inline-block;
+        padding-left: vw(20px);
+      }
+    }
+  }
+
   &__tabs {
     display: flex;
     gap: vw(15px);
@@ -56,11 +69,6 @@
 
     @include w375 {
       height: vw(485px);
-
-      // position: absolute;
-      // top: vw(82.5px);
-      // left: 0;
-      // width: vw(375px);
     }
   }
 

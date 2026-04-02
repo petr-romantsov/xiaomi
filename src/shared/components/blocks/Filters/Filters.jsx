@@ -14,6 +14,9 @@ import { filtersData } from '@/shared/constants';
 import styles from './Filters.module.scss';
 
 const getCurrentSlideNumber = (index) => index + 1;
+const getSlidesCounter = (index, totalCount) => {
+  return `0${index + 1}/0${totalCount}`;
+};
 
 export const Filters = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,7 +50,12 @@ export const Filters = () => {
       {!!filtersData.length && (
         <>
           <div className={styles.filters__tabsWrapper}>
-            <SectionTitle color="pink">ФИЛЬТРЫ</SectionTitle>
+            <SectionTitle color="pink" className={styles.filters__title}>
+              ФИЛЬТРЫ
+              {isMobile && (
+                <span>{getSlidesCounter(activeIndex, filtersData.length)}</span>
+              )}
+            </SectionTitle>
 
             <ul className={styles.filters__tabs}>
               {filtersTabs.map((filter, index) => {

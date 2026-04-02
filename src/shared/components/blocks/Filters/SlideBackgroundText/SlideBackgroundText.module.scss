@@ -5,7 +5,7 @@
   align-items: center;
   top: 50%;
   left: 50%;
-  width: 100vw;
+  width: 100%;
   transform: translate(-50%, calc(-50% - vw(60px)));
   z-index: 0;
   letter-spacing: -7%;
@@ -48,7 +48,7 @@
     }
 
     @include w768 {
-      font-size: vw(200px);
+      font-size: vw(180px);
       letter-spacing: 0;
     }
   }
