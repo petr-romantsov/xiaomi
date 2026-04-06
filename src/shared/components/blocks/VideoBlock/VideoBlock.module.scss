@@ -1,0 +1,20 @@
+.videoBlock {
+  position: relative;
+  height: vw(661px);
+
+  @include w2000 {
+    height: vw(661px);
+  }
+
+  @include w1280 {
+    height: vw(661px);
+  }
+
+  @include w768 {
+    height: vw(360px);
+  }
+
+  @include w375 {
+    height: vw(197px);
+  }
+}

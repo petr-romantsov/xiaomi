@@ -21,3 +21,4 @@ export * from './blocks/Collection/Collection';
 export * from './common/TitleWithCounter/TitleWithCounter';
 export * from './common/FiltersTabs/FiltersTabs';
 export * from './blocks/Collection/CollectionsSlide/CollectionsSlide';
+export * from './blocks/VideoBlock/VideoBlock';

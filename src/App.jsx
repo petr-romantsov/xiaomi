@@ -6,6 +6,7 @@ import {
   Footer,
   Header,
   Hero,
+  VideoBlock,
 } from '@/shared/components';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Concept />
       <Filters />
       <Collection />
+      <VideoBlock />
       <Footer />
     </>
   );
