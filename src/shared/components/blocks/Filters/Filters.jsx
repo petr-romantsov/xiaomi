@@ -2,21 +2,17 @@ import { useCallback, useState } from 'react';
 
 import { useMediaQuery } from '@/hooks';
 import {
-  ButtonTab,
   FiltersSlide,
-  SectionTitle,
+  FiltersTabs,
   SlideBackgroundText,
   Slider,
   SliderControls,
+  TitleWithCounter,
 } from '@/shared/components';
 import { filtersData } from '@/shared/constants';
+import { getCurrentSlideNumber } from '@/shared/helpers';
 
 import styles from './Filters.module.scss';
-
-const getCurrentSlideNumber = (index) => index + 1;
-const getSlidesCounter = (index, totalCount) => {
-  return `0${index + 1}/0${totalCount}`;
-};
 
 export const Filters = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,27 +46,17 @@ export const Filters = () => {
       {!!filtersData.length && (
         <>
           <div className={styles.filters__tabsWrapper}>
-            <SectionTitle color="pink" className={styles.filters__title}>
-              ФИЛЬТРЫ
-              {isMobile && (
-                <span>{getSlidesCounter(activeIndex, filtersData.length)}</span>
-              )}
-            </SectionTitle>
+            <TitleWithCounter
+              title="ФИЛЬТРЫ"
+              activeIndex={getCurrentSlideNumber(activeIndex)}
+              totalCount={filtersData.length}
+            />
 
-            <ul className={styles.filters__tabs}>
-              {filtersTabs.map((filter, index) => {
-                return (
-                  <li key={filter}>
-                    <ButtonTab
-                      onClick={() => handleTabClick(index)}
-                      isActive={activeIndex === index}
-                    >
-                      {filter}
-                    </ButtonTab>
-                  </li>
-                );
-              })}
-            </ul>
+            <FiltersTabs
+              tabs={filtersTabs}
+              activeIndex={activeIndex}
+              onClick={handleTabClick}
+            />
           </div>
           {!isMobile && (
             <SlideBackgroundText

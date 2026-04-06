@@ -1,0 +1,23 @@
+.collections {
+  @include container;
+
+  &__tabsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: vw(10px);
+    z-index: 1;
+    padding-left: vw(105px);
+
+    @include w2000 {
+      padding-left: vw(105px);
+    }
+
+    @include w1280 {
+      padding-left: vw(105px);
+    }
+
+    @include w768 {
+      padding-left: 0;
+    }
+  }
+}

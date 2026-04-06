@@ -1,4 +1,5 @@
 import {
+  Collection,
   Concept,
   Filters,
   FirstBlock,
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Concept />
       <Filters />
+      <Collection />
       <Footer />
     </>
   );

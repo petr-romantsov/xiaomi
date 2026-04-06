@@ -1,0 +1,14 @@
+.filters__tabs {
+  display: flex;
+  gap: vw(15px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include all-breakpoints(gap, 15px);
+
+  @include w375 {
+    flex-direction: column;
+    gap: vw(10px);
+  }
+}

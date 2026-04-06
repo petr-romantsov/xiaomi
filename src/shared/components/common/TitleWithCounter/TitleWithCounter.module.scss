@@ -1,0 +1,12 @@
+.titleWithCounter {
+  display: flex;
+
+  span {
+    display: none;
+
+    @include w375 {
+      display: inline-block;
+      padding-left: vw(20px);
+    }
+  }
+}

@@ -17,3 +17,7 @@ export * from './blocks/Filters/FiltersSlide/FiltersSlide';
 export * from './blocks/Footer/Footer';
 export * from './common/SliderControls/SliderControls';
 export * from './blocks/Filters/SlideBackgroundText/SlideBAckgroundText';
+export * from './blocks/Collection/Collection';
+export * from './common/TitleWithCounter/TitleWithCounter';
+export * from './common/FiltersTabs/FiltersTabs';
+export * from './blocks/Collection/CollectionsSlide/CollectionsSlide';

@@ -31,34 +31,6 @@
     }
   }
 
-  &__title {
-    display: flex;
-
-    span {
-      display: none;
-
-      @include w375 {
-        display: inline-block;
-        padding-left: vw(20px);
-      }
-    }
-  }
-
-  &__tabs {
-    display: flex;
-    gap: vw(15px);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    @include all-breakpoints(gap, 15px);
-
-    @include w375 {
-      flex-direction: column;
-      gap: vw(10px);
-    }
-  }
-
   &__slider {
     z-index: 0;
     height: vw(500px);

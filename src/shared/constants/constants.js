@@ -47,3 +47,21 @@ export const filtersData = [
     backgroundImg: blackiceBack,
   },
 ];
+
+export const collectionsData = [
+  {
+    title: 'LOOK1',
+  },
+  {
+    title: 'LOOK2',
+  },
+  {
+    title: 'LOOK3',
+  },
+  {
+    title: 'LOOK4',
+  },
+  {
+    title: 'LOOK5',
+  },
+];
