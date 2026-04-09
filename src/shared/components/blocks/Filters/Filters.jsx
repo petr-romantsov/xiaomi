@@ -65,11 +65,7 @@ export const Filters = () => {
               activeSlide={activeIndex}
             />
           )}
-          <Slider
-            activeIndex={activeIndex}
-            onNextSlide={handleNextSlide}
-            className={styles.filters__slider}
-          >
+          <Slider activeIndex={activeIndex} className={styles.filters__slider}>
             {filtersData.map((slide) => (
               <FiltersSlide
                 key={slide.title}

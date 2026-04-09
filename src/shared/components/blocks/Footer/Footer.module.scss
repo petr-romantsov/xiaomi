@@ -2,12 +2,12 @@
   @include container;
 
   &__content {
-    padding: vw(90px) 0 vw(190px);
+    padding-bottom: vw(190px);
     width: vw(854px);
     margin: 0 auto;
 
     @include all-breakpoints(width, 854px);
-    @include all-breakpoints(padding, 90px, 0, 190px);
+    @include all-breakpoints(padding-bottom, 190px);
 
     @include w768 {
       width: 100%;

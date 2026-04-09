@@ -1,4 +1,5 @@
 import {
+  Backstage,
   Collection,
   Concept,
   Filters,
@@ -19,6 +20,7 @@ function App() {
       <Filters />
       <Collection />
       <VideoBlock />
+      <Backstage />
       <Footer />
     </>
   );

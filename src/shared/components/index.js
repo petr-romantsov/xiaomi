@@ -22,3 +22,6 @@ export * from './common/TitleWithCounter/TitleWithCounter';
 export * from './common/FiltersTabs/FiltersTabs';
 export * from './blocks/Collection/CollectionsSlide/CollectionsSlide';
 export * from './blocks/VideoBlock/VideoBlock';
+export * from './blocks/Backstage/Backstage';
+export * from './blocks/Backstage/BackstageSlide/BackstageSlide';
+export * from './common/CollapseX/CollapseX';

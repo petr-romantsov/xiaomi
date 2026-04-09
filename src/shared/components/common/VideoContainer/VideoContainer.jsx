@@ -32,6 +32,7 @@ export const VideoContainer = ({ video, videoOptions = {}, className }) => {
         onPlay={onPlay}
         onPause={onPause}
         onEnded={onEnded}
+        playsInline
       >
         <source src={video} type="video/mp4" />
         <track kind="captions" />

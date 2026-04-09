@@ -1,4 +1,10 @@
 import {
+  backstageImage1_1,
+  backstageImage2_1,
+  backstageImage2_2,
+  backstageImage3_1,
+  backstageImage3_2,
+  backstageImage4_2,
   blackiceBack,
   colorFocusBack,
   cyberpunkBack,
@@ -8,7 +14,7 @@ import {
   filtersImage4,
   goldvibesBack,
 } from '@/assets/images';
-import { filtersVideo } from '@/assets/videos';
+import { conceptVideo, filtersVideo } from '@/assets/videos';
 
 export const filtersData = [
   {
@@ -63,5 +69,61 @@ export const collectionsData = [
   },
   {
     title: 'LOOK5',
+  },
+];
+
+export const backstageData = [
+  {
+    id: 'backstage-1',
+    media: [
+      {
+        type: 'image',
+        image: backstageImage1_1,
+      },
+      {
+        type: 'video',
+        video: conceptVideo,
+      },
+    ],
+  },
+  {
+    id: 'backstage-2',
+    media: [
+      {
+        type: 'image',
+        image: backstageImage2_1,
+      },
+      {
+        type: 'video',
+        video: conceptVideo,
+      },
+    ],
+  },
+  {
+    id: 'backstage-3',
+    media: [
+      {
+        type: 'image',
+        image: backstageImage3_1,
+      },
+      {
+        type: 'image',
+        image: backstageImage3_2,
+      },
+    ],
+  },
+  {
+    id: 'backstage-4',
+    reversed: true,
+    media: [
+      {
+        type: 'image',
+        image: backstageImage4_2,
+      },
+      {
+        type: 'video',
+        video: conceptVideo,
+      },
+    ],
   },
 ];

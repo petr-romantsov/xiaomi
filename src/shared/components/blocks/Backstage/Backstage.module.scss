@@ -1,0 +1,74 @@
+.backstage {
+  position: relative;
+  top: vw(-90px);
+
+  @include container;
+  @include all-breakpoints(top, -90px);
+
+  @include w375 {
+    top: unset;
+    padding-top: vw(80px);
+    background-image: url('@/assets/images/backstage/backstage-bg-mob.png');
+    background-size: 100%;
+    background-position: center top vw(195px);
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    position: relative;
+    height: vw(855px);
+    padding: vw(116px) vw(31px) vw(107px) vw(93px);
+    background-image: url('@/assets/images/backstage/backstage-bg.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include all-breakpoints(padding, 116px, 31px, 107px, 93px);
+    @include all-breakpoints(height, 855px);
+
+    @include w768 {
+      height: vw(680px);
+      padding: vw(116px) vw(31px) vw(107px) vw(45px);
+    }
+
+    @include w375 {
+      background-image: none;
+      height: auto;
+      padding: 0;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: vw(20px);
+    max-width: vw(360px);
+
+    @include all-breakpoints(max-width, 360px);
+    @include all-breakpoints(gap, 20px);
+
+    @include w375 {
+      max-width: vw(320px);
+      gap: vw(10px);
+    }
+  }
+
+  &__sliderControls {
+    position: absolute;
+    bottom: vw(107px);
+    right: vw(28px);
+    width: vw(158px);
+
+    @include all-breakpoints(bottom, 107px);
+    @include all-breakpoints(right, 28px);
+    @include all-breakpoints(width, 158px);
+
+    @include w375 {
+      bottom: vw(58px);
+    }
+  }
+
+  &__slider {
+    font-size: 20px;
+  }
+}

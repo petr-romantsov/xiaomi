@@ -1,3 +1,10 @@
+import backstageImage1_1 from './backstage/backstage1-1.png';
+import backstageImage2_1 from './backstage/backstage2-1.png';
+import backstageImage2_2 from './backstage/backstage2-2.png';
+import backstageImage3_1 from './backstage/backstage3-1.png';
+import backstageImage3_2 from './backstage/backstage3-2.png';
+import backstageImage4_2 from './backstage/backstage4-2.png';
+import backstageBg from './backstage/backstage-bg.png';
 import letterA from './concept/concept-A-letter.png';
 import blackiceBack from './filters/blackice-back.avif';
 import colorFocusBack from './filters/colorfocus-back.avif';
@@ -19,6 +26,7 @@ import TiktokIcon from './svg/tiktok.svg?react';
 import VkIcon from './svg/vk.svg?react';
 
 export {
+  backstageBg,
   PlayIcon,
   colorFocusBack,
   mainTitleMob,
@@ -38,4 +46,10 @@ export {
   cyberpunkBack,
   blackiceBack,
   goldvibesBack,
+  backstageImage1_1,
+  backstageImage2_1,
+  backstageImage2_2,
+  backstageImage3_1,
+  backstageImage3_2,
+  backstageImage4_2,
 };
