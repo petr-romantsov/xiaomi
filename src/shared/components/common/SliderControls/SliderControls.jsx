@@ -10,11 +10,16 @@ export const SliderControls = ({
   slidesTotalCount,
   onNextSlide,
   nextButtonText,
+  bigGap,
   className,
 }) => {
   return (
     <div className={clsx(styles.sliderControls, className)}>
-      <div className={styles.sliderControls__inner}>
+      <div
+        className={clsx(styles.sliderControls__inner, {
+          [styles.sliderControls__inner_bigGap]: bigGap,
+        })}
+      >
         {withCounter && (
           <SlidesCounter
             currentSlide={currentSlideNumber}

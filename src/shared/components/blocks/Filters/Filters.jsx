@@ -16,8 +16,8 @@ import styles from './Filters.module.scss';
 
 export const Filters = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isSlideChanging, setIsSlideChanging] = useState(false);
-  const [nextSlideIndex, setNextSlideIndex] = useState(0);
+  // const [isSlideChanging, setIsSlideChanging] = useState(false);
+  // const [nextSlideIndex, setNextSlideIndex] = useState(0);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   const filtersTabs = filtersData.map((filter) => filter.title);
@@ -25,20 +25,12 @@ export const Filters = () => {
   const backgroundImg = filtersData[activeIndex].backgroundImg;
 
   const handleNextSlide = useCallback(() => {
-    setNextSlideIndex((activeIndex + 1) % filtersTabs.length);
-    setIsSlideChanging(true);
+    setActiveIndex((prev) => (prev + 1) % filtersTabs.length);
   }, [activeIndex, filtersTabs]);
-
-  const onSlideChangingComplete = useCallback(() => {
-    setActiveIndex(nextSlideIndex);
-    setIsSlideChanging(false);
-  }, [nextSlideIndex]);
 
   const handleTabClick = (index) => {
     if (index === activeIndex) return;
-    if (isSlideChanging) return;
-    setNextSlideIndex(index);
-    setIsSlideChanging(true);
+    setActiveIndex(index);
   };
 
   return (
@@ -69,9 +61,7 @@ export const Filters = () => {
             {filtersData.map((slide) => (
               <FiltersSlide
                 key={slide.title}
-                onNextSlide={handleNextSlide}
-                isSlideChanging={isSlideChanging}
-                onSlideChangingComplete={onSlideChangingComplete}
+                // onNextSlide={handleNextSlide}
                 {...slide}
               />
             ))}

@@ -24,4 +24,4 @@ export * from './blocks/Collection/CollectionsSlide/CollectionsSlide';
 export * from './blocks/VideoBlock/VideoBlock';
 export * from './blocks/Backstage/Backstage';
 export * from './blocks/Backstage/BackstageSlide/BackstageSlide';
-export * from './common/CollapseX/CollapseX';
+export * from './ui/Image/Image';

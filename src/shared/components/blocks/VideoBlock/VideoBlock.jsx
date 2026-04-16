@@ -1,3 +1,4 @@
+import { videoBlockPoster } from '@/assets/images';
 import { videoBlockVideo } from '@/assets/videos';
 import { VideoContainer } from '@/shared/components';
 
@@ -8,6 +9,7 @@ export const VideoBlock = () => {
     <section className={styles.videoBlock}>
       <VideoContainer
         video={videoBlockVideo}
+        poster={videoBlockPoster}
         videoOptions={{
           controlled: true,
         }}

@@ -1,31 +1,16 @@
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 
+import { conceptPoster } from '@/assets/images';
 import { useMediaQuery } from '@/hooks';
-import { CollapseX, VideoContainer } from '@/shared/components';
+import { VideoContainer } from '@/shared/components';
+import { IMAGE_VARIANTS, SLIDER_DELAYS } from '@/shared/constants';
 
 import styles from './BackstageSlide.module.scss';
 
-export const BackstageSlide = ({
-  className,
-  content,
-  isSlideChanging,
-  reversed = false,
-  onSlideChangingComplete,
-}) => {
+export const BackstageSlide = ({ className, content, reversed = false }) => {
   const [leftContent, rightContent] = content;
   const isMobile = useMediaQuery('(max-width: 767px)');
-
-  const handleAnimationComplete = () => {
-    if (isSlideChanging) {
-      onSlideChangingComplete();
-    }
-  };
-
-  const animateOptions = {
-    initial: { scaleX: 0, transformOrigin: 'right' },
-    animate: { scaleX: isSlideChanging ? 0 : 1, transformOrigin: 'left' },
-    transition: { duration: 0.4 },
-  };
 
   return (
     <div
@@ -33,41 +18,65 @@ export const BackstageSlide = ({
         [styles.backstageSlide_reversed]: reversed,
       })}
     >
-      <CollapseX
-        {...animateOptions}
-        className={styles.backstageSlide__left}
-        onAnimationComplete={handleAnimationComplete}
-      >
+      <div className={styles.backstageSlide__left}>
         {leftContent.type === 'video' ? (
-          <VideoContainer
-            video={leftContent.video}
-            className={styles.backstageSlide__video}
-            videoOptions={{ controlled: true }}
-          />
+          <motion.div
+            variants={IMAGE_VARIANTS}
+            custom={SLIDER_DELAYS.FIRST_IMAGE_DELAY}
+            initial="enter"
+            animate="center"
+            exit="exit"
+          >
+            <VideoContainer
+              video={leftContent.video}
+              poster={conceptPoster}
+              className={styles.backstageSlide__video}
+              videoOptions={{ controlled: true }}
+            />
+          </motion.div>
         ) : (
-          <img
+          <motion.img
+            variants={IMAGE_VARIANTS}
+            custom={SLIDER_DELAYS.FIRST_IMAGE_DELAY}
+            initial="enter"
+            animate="center"
+            exit="exit"
             src={leftContent.image}
             alt="Photo from backstage."
             className={styles.backstageSlide__image}
           />
         )}
-      </CollapseX>
+      </div>
       {!isMobile && (
-        <CollapseX {...animateOptions} className={styles.backstageSlide__right}>
+        <div className={styles.backstageSlide__right}>
           {rightContent.type === 'video' ? (
-            <VideoContainer
-              video={rightContent.video}
-              className={styles.backstageSlide__video}
-              videoOptions={{ controlled: true }}
-            />
+            <motion.div
+              variants={IMAGE_VARIANTS}
+              custom={SLIDER_DELAYS.SECOND_IMAGE_DELAY}
+              initial="enter"
+              animate="center"
+              exit="exit"
+            >
+              <VideoContainer
+                video={rightContent.video}
+                poster={conceptPoster}
+                className={styles.backstageSlide__video}
+                videoOptions={{ controlled: true }}
+              />
+            </motion.div>
           ) : (
-            <img
+            <motion.img
+              variants={IMAGE_VARIANTS}
+              custom={SLIDER_DELAYS.SECOND_IMAGE_DELAY}
+              initial="enter"
+              animate="center"
+              exit="exit"
               src={rightContent.image}
               alt="Photo from backstage."
               className={styles.backstageSlide__image}
             />
           )}
-        </CollapseX>
+        </div>
       )}
     </div>
   );

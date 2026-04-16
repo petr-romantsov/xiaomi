@@ -1,3 +1,471 @@
 .collectionsSlide {
-  display: flex;
+  $p: &;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__imageWrapper {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &_01,
+  &_02 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(2) {
+        top: vw(-4px);
+        right: 0;
+        width: vw(383px);
+        height: vw(288px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 383px);
+        @include all-breakpoints(height, 288px);
+        @include all-breakpoints(top, -4px);
+        @include all-breakpoints(right, 0);
+      }
+
+      &:nth-of-type(3) {
+        width: vw(133px);
+        height: vw(188px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 133px);
+        @include all-breakpoints(height, 188px);
+      }
+
+      &:nth-of-type(4) {
+        width: vw(175px);
+        height: vw(247px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 175px);
+        @include all-breakpoints(height, 247px);
+      }
+    }
+  }
+
+  &_01,
+  &_02,
+  &_03 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(1) {
+        left: 0;
+        top: 0;
+        width: vw(357px);
+        height: vw(477px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 357px);
+        @include all-breakpoints(height, 477px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include w375 {
+          width: vw(375px);
+          height: vw(288px);
+          right: unset;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &:nth-of-type(5) {
+        width: vw(853px);
+        height: vw(490px);
+        z-index: 0;
+
+        @include all-breakpoints(width, 853px);
+        @include all-breakpoints(height, 490px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_01 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(3) {
+        left: vw(385.5px);
+        top: vw(331px);
+
+        @include all-breakpoints(left, 385.5px);
+        @include all-breakpoints(top, 331px);
+      }
+
+      &:nth-of-type(4) {
+        left: vw(661px);
+        top: vw(68px);
+
+        @include all-breakpoints(left, 661px);
+        @include all-breakpoints(top, 68px);
+      }
+
+      &:nth-of-type(5) {
+        left: vw(107px);
+        top: vw(-13px);
+
+        @include all-breakpoints(left, 107px);
+        @include all-breakpoints(top, -13px);
+      }
+    }
+  }
+
+  &_02 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(3) {
+        left: vw(507px);
+        top: vw(252px);
+        width: vw(133px);
+        height: vw(188px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 507px);
+        @include all-breakpoints(top, 252px);
+        @include all-breakpoints(width, 133px);
+        @include all-breakpoints(height, 188px);
+      }
+
+      &:nth-of-type(4) {
+        left: vw(640px);
+        top: vw(66px);
+
+        @include all-breakpoints(left, 640px);
+        @include all-breakpoints(top, 66px);
+      }
+
+      &:nth-of-type(5) {
+        left: vw(107px);
+        top: vw(99px);
+
+        @include all-breakpoints(left, 107px);
+        @include all-breakpoints(top, 99px);
+      }
+    }
+  }
+
+  &_03 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(2) {
+        left: vw(380px);
+        top: vw(73px);
+        width: vw(262px);
+        height: vw(349px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 380px);
+        @include all-breakpoints(top, 73px);
+        @include all-breakpoints(width, 262px);
+        @include all-breakpoints(height, 349px);
+
+        @include w375 {
+          width: vw(219px);
+          height: vw(292px);
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &:nth-of-type(3) {
+        left: vw(533px);
+        top: vw(356px);
+        width: vw(175px);
+        height: vw(247px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 533px);
+        @include all-breakpoints(top, 356px);
+        @include all-breakpoints(width, 175px);
+        @include all-breakpoints(height, 247px);
+      }
+
+      &:nth-of-type(4) {
+        left: vw(906px);
+        top: vw(16px);
+        width: vw(158px);
+        height: vw(223px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 906px);
+        @include all-breakpoints(top, 16px);
+        @include all-breakpoints(width, 158px);
+        @include all-breakpoints(height, 223px);
+      }
+
+      &:nth-of-type(5) {
+        left: vw(115px);
+        top: vw(-29px);
+
+        @include all-breakpoints(left, 115px);
+        @include all-breakpoints(top, -29px);
+      }
+    }
+  }
+
+  &_04 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(1) {
+        left: 0;
+        top: 0;
+        width: vw(476px);
+        height: vw(361px);
+        z-index: 2;
+
+        @include all-breakpoints(width, 476px);
+        @include all-breakpoints(height, 361px);
+
+        @include w375 {
+          width: vw(375px);
+          height: vw(291px);
+        }
+      }
+
+      &:nth-of-type(2) {
+        left: vw(353px);
+        top: vw(253px);
+        width: vw(383px);
+        height: vw(288px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 353px);
+        @include all-breakpoints(top, 253px);
+        @include all-breakpoints(width, 383px);
+        @include all-breakpoints(height, 288px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(3) {
+        left: vw(669px);
+        top: vw(112px);
+        width: vw(133px);
+        height: vw(188px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 669px);
+        @include all-breakpoints(top, 112px);
+        @include all-breakpoints(width, 133px);
+        @include all-breakpoints(height, 188px);
+      }
+
+      &:nth-of-type(4) {
+        left: vw(1013px);
+        top: vw(161px);
+        width: vw(109px);
+        height: vw(154px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 1013px);
+        @include all-breakpoints(top, 161px);
+        @include all-breakpoints(width, 109px);
+        @include all-breakpoints(height, 154px);
+      }
+
+      &:nth-of-type(5) {
+        left: vw(820px);
+        top: vw(-41px);
+        width: vw(175px);
+        height: vw(247px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 820px);
+        @include all-breakpoints(top, -41px);
+        @include all-breakpoints(width, 175px);
+        @include all-breakpoints(height, 247px);
+
+        @include w375 {
+          width: vw(105px);
+          height: vw(148px);
+          left: unset;
+          top: 0;
+          right: 0;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(6) {
+        right: 0;
+        top: vw(83px);
+        width: vw(853px);
+        height: vw(490px);
+        z-index: 0;
+
+        @include all-breakpoints(right, 0);
+        @include all-breakpoints(top, 83px);
+        @include all-breakpoints(width, 853px);
+        @include all-breakpoints(height, 490px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_05 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(1) {
+        left: 0;
+        top: 0;
+        width: vw(533px);
+        height: vw(401px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 533px);
+        @include all-breakpoints(height, 401px);
+
+        @include w375 {
+          width: vw(375px);
+          height: vw(290px);
+        }
+      }
+
+      &:nth-of-type(2) {
+        left: vw(486px);
+        top: vw(203px);
+        width: vw(232px);
+        height: vw(310px);
+        z-index: 2;
+
+        @include all-breakpoints(left, 486px);
+        @include all-breakpoints(top, 203px);
+        @include all-breakpoints(width, 232px);
+        @include all-breakpoints(height, 310px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(3) {
+        left: vw(326px);
+        top: vw(316px);
+        width: vw(141px);
+        height: vw(200px);
+        z-index: 2;
+
+        @include all-breakpoints(left, 326px);
+        @include all-breakpoints(top, 316px);
+        @include all-breakpoints(width, 141px);
+        @include all-breakpoints(height, 200px);
+      }
+
+      &:nth-of-type(4) {
+        right: 0;
+        top: 0;
+        width: vw(158px);
+        height: vw(223px);
+        z-index: 1;
+
+        @include all-breakpoints(width, 158px);
+        @include all-breakpoints(height, 223px);
+      }
+
+      &:nth-of-type(5) {
+        left: vw(749px);
+        top: vw(74.5px);
+        width: vw(176px);
+        height: vw(250px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 749px);
+        @include all-breakpoints(top, 74.5px);
+        @include all-breakpoints(width, 176px);
+        @include all-breakpoints(height, 250px);
+
+        @include w375 {
+          width: vw(105px);
+          height: vw(145px);
+          left: unset;
+          top: 0;
+          right: 0;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(6) {
+        left: vw(663.5px);
+        top: vw(-51px);
+        width: vw(109px);
+        height: vw(154px);
+        z-index: 1;
+
+        @include all-breakpoints(left, 663.5px);
+        @include all-breakpoints(top, -51px);
+        @include all-breakpoints(width, 109px);
+        @include all-breakpoints(height, 154px);
+
+        @include w375 {
+          width: vw(105px);
+          height: vw(145px);
+          left: unset;
+          top: vw(145px);
+          right: 0;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(7) {
+        right: 0;
+        top: vw(-31px);
+        width: vw(853px);
+        height: vw(490px);
+        z-index: 0;
+
+        @include all-breakpoints(right, 0);
+        @include all-breakpoints(top, -31px);
+        @include all-breakpoints(width, 853px);
+        @include all-breakpoints(height, 490px);
+
+        @include w375 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_01,
+  &_02,
+  &_03,
+  &_04,
+  &_05 {
+    #{$p}__imageWrapper {
+      &:nth-of-type(3) {
+        @include w375 {
+          width: vw(105px);
+          height: vw(148px);
+          z-index: 2;
+          right: vw(105px);
+          left: unset;
+          top: vw(-148px);
+        }
+      }
+
+      &:nth-of-type(4) {
+        @include w375 {
+          width: vw(105px);
+          height: vw(148px);
+          right: 0;
+          left: unset;
+          top: vw(-148px);
+        }
+      }
+    }
+  }
 }

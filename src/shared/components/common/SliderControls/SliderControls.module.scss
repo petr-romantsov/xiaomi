@@ -11,5 +11,11 @@
     @include w375 {
       gap: vw(17px);
     }
+
+    &_bigGap {
+      gap: vw(50px);
+
+      @include all-breakpoints(gap, 50px);
+    }
   }
 }

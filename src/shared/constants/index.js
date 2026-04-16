@@ -1,5 +1,10 @@
-import { collectionsData, filtersData } from './constants';
-import { backstageData } from './constants';
+import {
+  IMAGE_VARIANTS,
+  SLIDER_DELAYS,
+  backstageData,
+  collectionsData,
+  filtersData,
+} from './constants';
 import { navItems } from './navItems';
 import { SOCIALS } from './socials';
 import texts from './texts';
@@ -14,4 +19,6 @@ export {
   MOBILE_QUERY,
   collectionsData,
   backstageData,
+  IMAGE_VARIANTS,
+  SLIDER_DELAYS,
 };

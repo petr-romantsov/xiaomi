@@ -1,23 +1,116 @@
 .collections {
-  @include container;
+  position: relative;
+  margin: 0 auto;
+  max-width: 2000px;
+  width: 100%;
+  height: vw(1124px);
+  padding: 0 vw(107px) 0 0;
+
+  @include all-breakpoints(padding, 0, 107px, 0, 0);
+  @include all-breakpoints(height, 1124px);
+
+  @include w375 {
+    padding: vw(32px) 0 vw(157px);
+    height: auto;
+  }
+
+  &__slider {
+    @include w375 {
+      height: vw(300px);
+    }
+  }
 
   &__tabsWrapper {
     display: flex;
     flex-direction: column;
     gap: vw(10px);
     z-index: 1;
-    padding-left: vw(105px);
+    padding-left: vw(205px);
+    margin-bottom: vw(30px);
+
+    @include all-breakpoints(margin-bottom, 30px);
 
     @include w2000 {
-      padding-left: vw(105px);
+      padding-left: vw(205px);
     }
 
     @include w1280 {
-      padding-left: vw(105px);
+      padding-left: vw(205px);
     }
 
     @include w768 {
-      padding-left: 0;
+      padding-left: vw(40px);
+    }
+
+    @include w375 {
+      padding-left: vw(30px);
+    }
+  }
+
+  &__sliderControls {
+    padding-left: vw(205px);
+
+    @include w2000 {
+      padding-left: vw(205px);
+    }
+
+    @include w1280 {
+      padding-left: vw(205px);
+    }
+
+    @include w768 {
+      padding-left: vw(40px);
+    }
+
+    @include w375 {
+      padding-left: vw(30px);
+      margin-bottom: vw(26px);
+    }
+  }
+
+  &__description {
+    position: absolute;
+    right: 0;
+    top: vw(450px);
+    margin-right: vw(215px);
+    max-width: vw(318px);
+
+    @include all-breakpoints(max-width, 318px);
+
+    @include w2000 {
+      margin-right: vw(215px);
+      top: vw(450px);
+    }
+
+    @include w1280 {
+      margin-right: vw(215px);
+      top: vw(450px);
+    }
+
+    @include w768 {
+      margin-right: vw(40px);
+      top: vw(450px);
+    }
+
+    @include w375 {
+      position: static;
+      margin: auto;
+    }
+
+    &Item:nth-child(-n + 2) {
+      margin-bottom: vw(20px);
+
+      @include all-breakpoints(margin-bottom, 20px);
+    }
+
+    &Item_pink {
+      margin-top: vw(46px);
+
+      @include all-breakpoints(margin-top, 46px);
+
+      @include w375 {
+        margin-top: vw(55px);
+      }
     }
   }
 }

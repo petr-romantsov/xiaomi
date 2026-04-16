@@ -1,4 +1,4 @@
-import { letterA } from '@/assets/images';
+import { conceptPoster, letterA } from '@/assets/images';
 import { conceptVideo } from '@/assets/videos';
 import { SectionTitle, Text, VideoContainer } from '@/shared/components';
 import { texts } from '@/shared/constants';
@@ -25,6 +25,7 @@ export const Concept = () => {
         </div>
         <VideoContainer
           video={conceptVideo}
+          poster={conceptPoster}
           videoOptions={{
             controlled: true,
             smallPlayBtn: true,

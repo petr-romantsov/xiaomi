@@ -13,22 +13,10 @@ import styles from './Backstage.module.scss';
 
 export function Backstage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isSlideChanging, setIsSlideChanging] = useState(false);
-  const [nextSlideIndex, setNextSlideIndex] = useState(0);
 
   const handleNextSlide = useCallback(() => {
-    setNextSlideIndex((activeIndex + 1) % backstageData.length);
-    setIsSlideChanging(true);
+    setActiveIndex((prev) => (prev + 1) % backstageData.length);
   }, [activeIndex, backstageData]);
-
-  const onSlideChangingComplete = useCallback(() => {
-    setActiveIndex(nextSlideIndex);
-    setIsSlideChanging(false);
-  }, [nextSlideIndex]);
-
-  // const handleNextSlide = () => {
-  //   setActiveIndex((activeIndex + 1) % backstageData.length);
-  // };
 
   return (
     <section className={styles.backstage}>
@@ -52,9 +40,6 @@ export function Backstage() {
               <BackstageSlide
                 key={item.id}
                 content={item.media}
-                isSlideChanging={isSlideChanging}
-                onNextSlide={handleNextSlide}
-                onSlideChangingComplete={onSlideChangingComplete}
                 reversed={item.reversed}
               />
             ))}
