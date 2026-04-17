@@ -48,6 +48,7 @@ import modelImg from './hero/Mi10T.png';
 import aytlo from './hero/hero-aytlo.png';
 import phone from './hero/phone.png';
 import conceptPoster from './posters/concept-poster.webp';
+import contestPoster from './posters/contest-poster.webp';
 import filtersPoster from './posters/filters-poster.webp';
 import headerPoster from './posters/header-poster.webp';
 import videoBlockPoster from './posters/videoblock-poster.webp';
@@ -116,4 +117,5 @@ export {
   filtersPoster,
   headerPoster,
   videoBlockPoster,
+  contestPoster,
 };

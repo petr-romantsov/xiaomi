@@ -14,7 +14,7 @@ export function Header() {
                 <NavLink
                   className={styles.header__link}
                   link={item.link}
-                  size={item.size}
+                  color="white"
                 >
                   {item.text}
                 </NavLink>

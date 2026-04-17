@@ -1,7 +1,9 @@
+import { useMediaQuery } from '@/hooks';
 import {
   Backstage,
   Collection,
   Concept,
+  Contest,
   Filters,
   FirstBlock,
   Footer,
@@ -11,6 +13,7 @@ import {
 } from '@/shared/components';
 
 function App() {
+  const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <>
       <Header />
@@ -18,6 +21,7 @@ function App() {
       <Hero />
       <Concept />
       <Filters />
+      {isMobile && <Contest />}
       <Collection />
       <VideoBlock />
       <Backstage />

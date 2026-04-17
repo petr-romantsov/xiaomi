@@ -1,0 +1,54 @@
+.contest {
+  @include container;
+
+  @include w375 {
+    padding-top: vw(46px);
+  }
+
+  &__videoWrapper {
+    position: relative;
+
+    @include w375 {
+      margin-bottom: vw(71px);
+    }
+  }
+
+  &__video {
+    @include w375 {
+      width: vw(315px);
+      height: vw(315px);
+    }
+  }
+
+  &__descr {
+    @include w375 {
+      position: absolute;
+      bottom: vw(-44px);
+      left: vw(-2px);
+      max-width: vw(282px);
+      font-family: var(--font-family-pt-mono);
+      font-weight: 400;
+      font-size: vw(20px);
+      line-height: 100%;
+      color: var(--color-text-pink);
+
+      span {
+        padding: vw(2px) vw(4px);
+        line-height: 110%;
+        background-color: var(--color-bg-black);
+        box-decoration-break: clone;
+        webkit-box-decoration-break: clone;
+      }
+    }
+  }
+
+  &__conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include w375 {
+      gap: vw(20px);
+    }
+  }
+}
