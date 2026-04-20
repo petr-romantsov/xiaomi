@@ -7,16 +7,12 @@
   height: 100%;
   padding: 0 vw(51px) 0 vw(105px);
 
-  @include w2000 {
+  @include w1996 {
     padding: 0 vw(51px) 0 vw(105px);
   }
 
   @include w1280 {
     padding: 0 vw(95px) 0 vw(105px);
-  }
-
-  @include w768 {
-    padding: 0;
   }
 
   @include w375 {
@@ -44,11 +40,6 @@
 
     @include all-breakpoints(width, 443px);
     @include all-breakpoints(height, 301px);
-
-    @include w768 {
-      width: vw(375px);
-      height: vw(255px);
-    }
 
     @include w375 {
       width: vw(375px);
@@ -78,11 +69,6 @@
 
     @include all-breakpoints(width, 168px);
     @include all-breakpoints(height, 332px);
-
-    @include w768 {
-      width: vw(136px);
-      height: vw(269px);
-    }
 
     @include w375 {
       position: absolute;

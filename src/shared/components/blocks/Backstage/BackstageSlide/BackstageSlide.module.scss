@@ -2,22 +2,17 @@
   $p: &;
 
   position: relative;
-  top: vw(-120px);
-  left: vw(-120px);
+  top: -120px;
+  left: -120px;
   display: flex;
   align-items: flex-end;
-  gap: vw(106px);
+  gap: 106px;
   width: 100%;
   height: 100%;
 
   @include all-breakpoints(gap, 106px);
   @include all-breakpoints(top, -120px);
   @include all-breakpoints(left, -120px);
-
-  @include w768 {
-    top: vw(-240px);
-    left: vw(-60px);
-  }
 
   @include w375 {
     left: 0;
@@ -29,24 +24,16 @@
     align-items: flex-start;
     justify-content: flex-end;
     left: 0;
-    top: vw(40px);
+    top: 40px;
 
     @include all-breakpoints(top, 40px);
     @include all-breakpoints(left, 0);
-
-    @include w768 {
-      top: vw(16px);
-    }
 
     #{$p}__left {
       height: vw(300px);
       aspect-ratio: 427 / 300;
 
       @include all-breakpoints(height, 300px);
-
-      @include w768 {
-        height: vw(205px);
-      }
 
       @include w375 {
         height: auto;
@@ -67,10 +54,6 @@
 
     @include all-breakpoints(height, 373px);
 
-    @include w768 {
-      height: vw(250px);
-    }
-
     @include w375 {
       position: absolute;
       top: vw(40px);
@@ -90,10 +73,6 @@
 
     @include all-breakpoints(height, 400px);
     @include all-breakpoints(top, -102px);
-
-    @include w768 {
-      height: vw(285px);
-    }
 
     @include w375 {
       display: none;

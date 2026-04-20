@@ -5,11 +5,14 @@
 
   &__content {
     position: relative;
-    top: vw(-83px);
+    top: -83px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: vw(46px) vw(96px) vw(113px) vw(106px);
+    margin: 0 auto;
+    width: 1084px;
+    height: 690px;
+    padding: 48px 101px 99px 118px;
     z-index: 1;
 
     & > * {
@@ -17,17 +20,25 @@
     }
 
     @include all-breakpoints(top, -83px);
-    @include all-breakpoints(padding, 46px, 96px, 118px, 106px);
 
-    @include w768 {
-      padding: vw(46px) vw(15px) vw(100px);
+    @include w1996 {
+      width: vw(1084px);
+      height: vw(690px);
+      padding: vw(48px) vw(101px) vw(99px) vw(118px);
+    }
+
+    @include w1280 {
+      width: vw(1057px);
+      height: vw(690px);
+      padding: vw(46px) vw(96px) vw(100px) vw(106px);
     }
 
     @include w375 {
-      padding: 0;
-      padding-top: vw(380px);
       top: unset;
       flex-direction: column;
+      padding: 0;
+      padding-top: vw(380px);
+      height: auto;
     }
 
     &::after {
@@ -43,7 +54,7 @@
       @include w375 {
         background-image: url('@/assets/images/hero/hero-bg-mob.png');
         bottom: unset;
-        top: vw(725px);
+        top: vw(807px);
         left: 50%;
         right: unset;
         transform: translateX(-50%);
@@ -55,26 +66,21 @@
 
   &__model {
     position: absolute;
-    top: vw(-104px);
-    left: vw(147px);
-    width: vw(417px);
+    top: -85px;
+    left: 102px;
+    width: 417px;
     z-index: 2;
 
-    @include all-breakpoints(top, -104px);
-    @include all-breakpoints(left, 106px);
-
-    @include w2000 {
+    @include w1996 {
       width: vw(417px);
+      top: vw(-85px);
+      left: vw(102px);
     }
 
     @include w1280 {
       width: vw(417px);
-    }
-
-    @include w768 {
-      width: vw(320px);
-      top: vw(-35px);
-      left: vw(15px);
+      top: vw(-85px);
+      left: vw(102px);
     }
 
     @include w375 {
@@ -90,7 +96,7 @@
   }
 
   &__aytlo {
-    width: vw(148px);
+    width: 148px;
     height: auto;
     object-fit: contain;
     object-position: center;
@@ -105,8 +111,8 @@
   &__text {
     display: flex;
     flex-direction: column;
-    gap: vw(30px);
-    width: vw(216px);
+    gap: 30px;
+    width: 216px;
 
     @include all-breakpoints(width, 216px);
     @include all-breakpoints(gap, 30px);
@@ -117,29 +123,20 @@
     }
 
     &_first {
-      @include all-breakpoints(padding-bottom, 100px);
-
-      @include w768 {
-        padding-bottom: vw(35px);
-      }
+      @include all-breakpoints(padding-bottom, 96px);
     }
   }
 
   &__phone {
     position: absolute;
-    top: vw(-175px);
+    top: -161px;
     left: 50%;
     transform: translateX(-50%);
-    width: vw(420px);
+    width: 420px;
     height: auto;
 
     @include all-breakpoints(top, -175px);
     @include all-breakpoints(width, 420px);
-
-    @include w768 {
-      top: vw(-90px);
-      width: vw(300px);
-    }
 
     @include w375 {
       width: vw(177px);
@@ -157,23 +154,13 @@
 
   &__link {
     position: relative;
-    top: vw(80px);
+    top: 95px;
     font-weight: 700;
-    font-size: vw(14px);
+    font-size: 14px;
     line-height: 100%;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: vw(2px);
-    color: var(--color-text-pink);
-    cursor: pointer;
 
-    @include all-breakpoints(text-underline-offset, 2px);
-    @include all-breakpoints(top, 80px);
+    @include all-breakpoints(top, 95px);
     @include all-breakpoints(font-size, 14px);
-
-    @include w768 {
-      top: vw(20px);
-    }
 
     @include w375 {
       position: absolute;
@@ -182,6 +169,28 @@
       width: vw(64px);
       text-align: end;
       line-height: 130%;
+    }
+  }
+
+  &__contentDisclaimer {
+    position: absolute;
+    bottom: -134px;
+    left: 655px;
+
+    @include all-breakpoints(bottom, -134px);
+
+    @include w1996 {
+      left: vw(655px);
+    }
+
+    @include w1280 {
+      left: vw(637px);
+    }
+
+    @include w375 {
+      top: vw(125px);
+      left: vw(238px);
+      bottom: unset;
     }
   }
 }

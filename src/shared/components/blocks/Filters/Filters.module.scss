@@ -55,10 +55,6 @@
     @include all-breakpoints(padding-right, 213px);
     @include all-breakpoints(bottom, 105px);
 
-    @include w768 {
-      padding-right: vw(40px);
-    }
-
     @include w375 {
       padding-right: 0;
       bottom: 0;

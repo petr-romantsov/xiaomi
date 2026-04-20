@@ -1,6 +1,6 @@
 .backstage {
   position: relative;
-  top: vw(-90px);
+  top: -90px;
 
   @include container;
   @include all-breakpoints(top, -90px);
@@ -25,11 +25,6 @@
 
     @include all-breakpoints(padding, 116px, 31px, 107px, 93px);
     @include all-breakpoints(height, 855px);
-
-    @include w768 {
-      height: vw(680px);
-      padding: vw(116px) vw(31px) vw(107px) vw(45px);
-    }
 
     @include w375 {
       background-image: none;

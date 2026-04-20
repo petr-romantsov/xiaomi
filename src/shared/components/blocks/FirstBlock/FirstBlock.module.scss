@@ -1,19 +1,15 @@
 .firstBlock {
   position: relative;
-  height: vw(661px);
+  height: 1031px;
 
   @include container;
 
-  @include w2000 {
-    height: vw(661px);
+  @include w1996 {
+    height: 1031px;
   }
 
   @include w1280 {
     height: vw(661px);
-  }
-
-  @include w768 {
-    height: vw(360px);
   }
 
   @include w375 {
@@ -37,16 +33,12 @@
     top: 40%;
     transform: translate(-50%, -40%);
 
-    @include w2000 {
+    @include w1996 {
       width: vw(852px);
     }
 
     @include w1280 {
       width: vw(852px);
-    }
-
-    @include w768 {
-      width: vw(400px);
     }
 
     @include w375 {
@@ -70,28 +62,23 @@
   &__description {
     text-align: start;
     font-family: var(--font-family-ibm-plex-mono);
-    font-size: vw(13px);
+    font-size: 13px;
     line-height: 100%;
     font-weight: 700;
     text-transform: uppercase;
     max-width: unset;
-    margin-right: vw(113px);
+    margin-right: 113px;
     align-self: flex-end;
 
     @include all-breakpoints(font-size, 13px);
 
-    @include w2000 {
+    @include w1996 {
       margin-right: vw(113px);
     }
 
     @include w1280 {
       max-width: vw(230px);
       margin-right: vw(265px);
-    }
-
-    @include w768 {
-      margin-right: vw(113px);
-      max-width: vw(230px);
     }
 
     @include w375 {

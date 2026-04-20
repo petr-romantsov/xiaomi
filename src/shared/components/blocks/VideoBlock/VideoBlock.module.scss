@@ -1,17 +1,13 @@
 .videoBlock {
   position: relative;
-  height: vw(661px);
+  height: 661px;
 
-  @include w2000 {
+  @include w1996 {
     height: vw(661px);
   }
 
   @include w1280 {
     height: vw(661px);
-  }
-
-  @include w768 {
-    height: vw(360px);
   }
 
   @include w375 {

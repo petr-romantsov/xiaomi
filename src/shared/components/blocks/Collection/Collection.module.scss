@@ -3,8 +3,8 @@
   margin: 0 auto;
   max-width: 2000px;
   width: 100%;
-  height: vw(1124px);
-  padding: 0 vw(107px) 0 0;
+  height: 1124px;
+  padding: 0 107px 0 0;
 
   @include all-breakpoints(padding, 0, 107px, 0, 0);
   @include all-breakpoints(height, 1124px);
@@ -23,23 +23,19 @@
   &__tabsWrapper {
     display: flex;
     flex-direction: column;
-    gap: vw(10px);
+    gap: 10px;
     z-index: 1;
-    padding-left: vw(205px);
-    margin-bottom: vw(30px);
+    padding-left: 205px;
+    margin-bottom: 30px;
 
     @include all-breakpoints(margin-bottom, 30px);
 
-    @include w2000 {
+    @include w1996 {
       padding-left: vw(205px);
     }
 
     @include w1280 {
       padding-left: vw(205px);
-    }
-
-    @include w768 {
-      padding-left: vw(40px);
     }
 
     @include w375 {
@@ -50,16 +46,12 @@
   &__sliderControls {
     padding-left: vw(205px);
 
-    @include w2000 {
+    @include w1996 {
       padding-left: vw(205px);
     }
 
     @include w1280 {
       padding-left: vw(205px);
-    }
-
-    @include w768 {
-      padding-left: vw(40px);
     }
 
     @include w375 {
@@ -77,18 +69,13 @@
 
     @include all-breakpoints(max-width, 318px);
 
-    @include w2000 {
+    @include w1996 {
       margin-right: vw(215px);
       top: vw(450px);
     }
 
     @include w1280 {
       margin-right: vw(215px);
-      top: vw(450px);
-    }
-
-    @include w768 {
-      margin-right: vw(40px);
       top: vw(450px);
     }
 

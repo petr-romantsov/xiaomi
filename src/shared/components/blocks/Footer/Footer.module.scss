@@ -9,10 +9,6 @@
     @include all-breakpoints(width, 854px);
     @include all-breakpoints(padding-bottom, 190px);
 
-    @include w768 {
-      width: 100%;
-    }
-
     @include w375 {
       padding: vw(56px) 0 vw(100px);
     }

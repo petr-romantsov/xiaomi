@@ -21,10 +21,10 @@
   &_02 {
     #{$p}__imageWrapper {
       &:nth-of-type(2) {
-        top: vw(-4px);
+        top: v-4px;
         right: 0;
-        width: vw(383px);
-        height: vw(288px);
+        width: 383px;
+        height: 288px;
         z-index: 1;
 
         @include all-breakpoints(width, 383px);
@@ -34,8 +34,8 @@
       }
 
       &:nth-of-type(3) {
-        width: vw(133px);
-        height: vw(188px);
+        width: 133px;
+        height: 188px;
         z-index: 1;
 
         @include all-breakpoints(width, 133px);
@@ -43,8 +43,8 @@
       }
 
       &:nth-of-type(4) {
-        width: vw(175px);
-        height: vw(247px);
+        width: 175px;
+        height: 247px;
         z-index: 1;
 
         @include all-breakpoints(width, 175px);
@@ -60,8 +60,8 @@
       &:nth-of-type(1) {
         left: 0;
         top: 0;
-        width: vw(357px);
-        height: vw(477px);
+        width: 357px;
+        height: 477px;
         z-index: 1;
 
         @include all-breakpoints(width, 357px);
@@ -74,8 +74,8 @@
 
       &:nth-of-type(2) {
         @include w375 {
-          width: vw(375px);
-          height: vw(288px);
+          width: 375px;
+          height: 288px;
           right: unset;
           left: 0;
           top: 0;
@@ -83,8 +83,8 @@
       }
 
       &:nth-of-type(5) {
-        width: vw(853px);
-        height: vw(490px);
+        width: 853px;
+        height: 490px;
         z-index: 0;
 
         @include all-breakpoints(width, 853px);
@@ -100,24 +100,24 @@
   &_01 {
     #{$p}__imageWrapper {
       &:nth-of-type(3) {
-        left: vw(385.5px);
-        top: vw(331px);
+        left: 385.5px;
+        top: 331px;
 
         @include all-breakpoints(left, 385.5px);
         @include all-breakpoints(top, 331px);
       }
 
       &:nth-of-type(4) {
-        left: vw(661px);
-        top: vw(68px);
+        left: 661px;
+        top: 68px;
 
         @include all-breakpoints(left, 661px);
         @include all-breakpoints(top, 68px);
       }
 
       &:nth-of-type(5) {
-        left: vw(107px);
-        top: vw(-13px);
+        left: 107px;
+        top: -13px;
 
         @include all-breakpoints(left, 107px);
         @include all-breakpoints(top, -13px);
@@ -128,10 +128,10 @@
   &_02 {
     #{$p}__imageWrapper {
       &:nth-of-type(3) {
-        left: vw(507px);
-        top: vw(252px);
-        width: vw(133px);
-        height: vw(188px);
+        left: 507px;
+        top: 252px;
+        width: 133px;
+        height: 188px;
         z-index: 1;
 
         @include all-breakpoints(left, 507px);
@@ -141,16 +141,16 @@
       }
 
       &:nth-of-type(4) {
-        left: vw(640px);
-        top: vw(66px);
+        left: 640px;
+        top: 66px;
 
         @include all-breakpoints(left, 640px);
         @include all-breakpoints(top, 66px);
       }
 
       &:nth-of-type(5) {
-        left: vw(107px);
-        top: vw(99px);
+        left: 107px;
+        top: 99px;
 
         @include all-breakpoints(left, 107px);
         @include all-breakpoints(top, 99px);
@@ -161,10 +161,10 @@
   &_03 {
     #{$p}__imageWrapper {
       &:nth-of-type(2) {
-        left: vw(380px);
-        top: vw(73px);
-        width: vw(262px);
-        height: vw(349px);
+        left: 380px;
+        top: 73px;
+        width: 262px;
+        height: 349px;
         z-index: 1;
 
         @include all-breakpoints(left, 380px);
@@ -173,18 +173,18 @@
         @include all-breakpoints(height, 349px);
 
         @include w375 {
-          width: vw(219px);
-          height: vw(292px);
+          width: 219px;
+          height: 292px;
           left: 0;
           top: 0;
         }
       }
 
       &:nth-of-type(3) {
-        left: vw(533px);
-        top: vw(356px);
-        width: vw(175px);
-        height: vw(247px);
+        left: 533px;
+        top: 356px;
+        width: 175px;
+        height: 247px;
         z-index: 1;
 
         @include all-breakpoints(left, 533px);
@@ -194,10 +194,10 @@
       }
 
       &:nth-of-type(4) {
-        left: vw(906px);
-        top: vw(16px);
-        width: vw(158px);
-        height: vw(223px);
+        left: 906px;
+        top: 16px;
+        width: 158px;
+        height: 223px;
         z-index: 1;
 
         @include all-breakpoints(left, 906px);
@@ -207,8 +207,8 @@
       }
 
       &:nth-of-type(5) {
-        left: vw(115px);
-        top: vw(-29px);
+        left: 115px;
+        top: -29px;
 
         @include all-breakpoints(left, 115px);
         @include all-breakpoints(top, -29px);
@@ -221,8 +221,8 @@
       &:nth-of-type(1) {
         left: 0;
         top: 0;
-        width: vw(476px);
-        height: vw(361px);
+        width: 476px;
+        height: 361px;
         z-index: 2;
 
         @include all-breakpoints(width, 476px);
@@ -235,10 +235,10 @@
       }
 
       &:nth-of-type(2) {
-        left: vw(353px);
-        top: vw(253px);
-        width: vw(383px);
-        height: vw(288px);
+        left: 353px;
+        top: 253px;
+        width: 383px;
+        height: 288px;
         z-index: 1;
 
         @include all-breakpoints(left, 353px);
@@ -252,10 +252,10 @@
       }
 
       &:nth-of-type(3) {
-        left: vw(669px);
-        top: vw(112px);
-        width: vw(133px);
-        height: vw(188px);
+        left: 669px;
+        top: 112px;
+        width: 133px;
+        height: 188px;
         z-index: 1;
 
         @include all-breakpoints(left, 669px);
@@ -265,10 +265,10 @@
       }
 
       &:nth-of-type(4) {
-        left: vw(1013px);
-        top: vw(161px);
-        width: vw(109px);
-        height: vw(154px);
+        left: 1013px;
+        top: 161px;
+        width: 109px;
+        height: 154px;
         z-index: 1;
 
         @include all-breakpoints(left, 1013px);
@@ -278,10 +278,10 @@
       }
 
       &:nth-of-type(5) {
-        left: vw(820px);
-        top: vw(-41px);
-        width: vw(175px);
-        height: vw(247px);
+        left: 820px;
+        top: -41px;
+        width: 175px;
+        height: 247px;
         z-index: 1;
 
         @include all-breakpoints(left, 820px);
@@ -290,8 +290,8 @@
         @include all-breakpoints(height, 247px);
 
         @include w375 {
-          width: vw(105px);
-          height: vw(148px);
+          width: 105px;
+          height: 148px;
           left: unset;
           top: 0;
           right: 0;
@@ -301,9 +301,9 @@
 
       &:nth-of-type(6) {
         right: 0;
-        top: vw(83px);
-        width: vw(853px);
-        height: vw(490px);
+        top: 83px;
+        width: 853px;
+        height: 490px;
         z-index: 0;
 
         @include all-breakpoints(right, 0);
@@ -323,8 +323,8 @@
       &:nth-of-type(1) {
         left: 0;
         top: 0;
-        width: vw(533px);
-        height: vw(401px);
+        width: 533px;
+        height: 401px;
         z-index: 1;
 
         @include all-breakpoints(width, 533px);
@@ -337,10 +337,10 @@
       }
 
       &:nth-of-type(2) {
-        left: vw(486px);
-        top: vw(203px);
-        width: vw(232px);
-        height: vw(310px);
+        left: 486px;
+        top: 203px;
+        width: 232px;
+        height: 310px;
         z-index: 2;
 
         @include all-breakpoints(left, 486px);
@@ -354,10 +354,10 @@
       }
 
       &:nth-of-type(3) {
-        left: vw(326px);
-        top: vw(316px);
-        width: vw(141px);
-        height: vw(200px);
+        left: 326px;
+        top: 316px;
+        width: 141px;
+        height: 200px;
         z-index: 2;
 
         @include all-breakpoints(left, 326px);
@@ -369,8 +369,8 @@
       &:nth-of-type(4) {
         right: 0;
         top: 0;
-        width: vw(158px);
-        height: vw(223px);
+        width: 158px;
+        height: 223px;
         z-index: 1;
 
         @include all-breakpoints(width, 158px);
@@ -378,10 +378,10 @@
       }
 
       &:nth-of-type(5) {
-        left: vw(749px);
-        top: vw(74.5px);
-        width: vw(176px);
-        height: vw(250px);
+        left: 749px;
+        top: 74.5px;
+        width: 176px;
+        height: 250px;
         z-index: 1;
 
         @include all-breakpoints(left, 749px);
@@ -400,10 +400,10 @@
       }
 
       &:nth-of-type(6) {
-        left: vw(663.5px);
-        top: vw(-51px);
-        width: vw(109px);
-        height: vw(154px);
+        left: 663.5px;
+        top: -51px;
+        width: 109px;
+        height: 154px;
         z-index: 1;
 
         @include all-breakpoints(left, 663.5px);
@@ -412,8 +412,8 @@
         @include all-breakpoints(height, 154px);
 
         @include w375 {
-          width: vw(105px);
-          height: vw(145px);
+          width: 105px;
+          height: 145px;
           left: unset;
           top: vw(145px);
           right: 0;
@@ -423,9 +423,9 @@
 
       &:nth-of-type(7) {
         right: 0;
-        top: vw(-31px);
-        width: vw(853px);
-        height: vw(490px);
+        top: -31px;
+        width: 853px;
+        height: 490px;
         z-index: 0;
 
         @include all-breakpoints(right, 0);

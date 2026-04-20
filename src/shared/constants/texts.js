@@ -24,6 +24,8 @@ const texts = {
     'Идея проходит лейтмотивом через всю линейку одежды, раскрывается через слоганы Power your creativity и\u00A0As above so below и\u00A0воплощается в\u00A0палитре новых светофильтров серии\u00A0Mi\u00A010T.',
   COLLECTIONS_FOURTH_PARAGRAPH:
     'РАСКРОЙТЕ ВАШУ КРЕАТИВНОСТЬ С\u00A0СЕРИЕЙ Mi\u00A010T И\u00A0AYT\u039B\u039F CREATIVE.',
+  CONTENT_DISCLAIMER:
+    'ВЕСЬ ФОТО- И\u00A0ВИДЕОКОНТЕНТ НА\u00A0САЙТЕ СОЗДАН С\u00A0ПОМОЩЬЮ Mi\u00A010T PRO.',
 };
 
 export default texts;

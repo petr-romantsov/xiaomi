@@ -10,15 +10,11 @@
   z-index: 0;
   letter-spacing: -7%;
 
-  @include w2000 {
+  @include w1996 {
     transform: translate(-50%, calc(-50% - vw(60px)));
   }
 
   @include w1280 {
-    transform: translate(-50%, calc(-50% - vw(60px)));
-  }
-
-  @include w768 {
     transform: translate(-50%, calc(-50% - vw(60px)));
   }
 
@@ -39,7 +35,7 @@
     background-repeat: no-repeat;
     background-clip: text;
 
-    @include w2000 {
+    @include w1996 {
       font-size: vw(280px);
     }
 
@@ -47,9 +43,5 @@
       font-size: vw(280px);
     }
 
-    @include w768 {
-      font-size: vw(180px);
-      letter-spacing: 0;
-    }
   }
 }

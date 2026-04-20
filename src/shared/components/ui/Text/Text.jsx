@@ -8,6 +8,7 @@ export function Text({ children, size, color = 'white', className = '' }) {
       className={clsx(
         styles.text,
         {
+          [styles.text_size_xs]: size === 'xs',
           [styles.text_size_sm]: size === 'sm',
           [styles.text_size_lg]: size === 'lg',
           [styles.text_color_pink]: color === 'pink',

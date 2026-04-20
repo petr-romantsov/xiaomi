@@ -1,0 +1,8 @@
+.contentDisclaimer {
+  text-transform: uppercase;
+  width: 380px;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+
+  @include all-breakpoints(width, 380px);
+}

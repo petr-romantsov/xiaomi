@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import { aytlo, modelImg, phone } from '@/assets/images';
-import { NavLink, Text } from '@/shared/components';
+import { ContentDisclaimer, NavLink, Text } from '@/shared/components';
 import { texts } from '@/shared/constants';
 
 import styles from './Hero.module.scss';
@@ -24,7 +24,7 @@ export const Hero = () => {
             alt="Изображение телефона Mi 10T"
           />
         </div>
-        <NavLink className={styles.hero__link} link="#">
+        <NavLink className={styles.hero__link} link="#" color="pink">
           ПОДРОБНЕЕ О СЕРИИ Mi 10T
         </NavLink>
         <div className={styles.hero__text}>
@@ -33,9 +33,10 @@ export const Hero = () => {
             src={aytlo}
             alt="АУТЛО Creative"
           />
-          <Text>{texts.HERO_THIRD_PARAGRAPH}</Text>
-          <Text>{texts.HERO_FOURTH_PARAGRAPH}</Text>
+          <Text size="sm">{texts.HERO_THIRD_PARAGRAPH}</Text>
+          <Text size="sm">{texts.HERO_FOURTH_PARAGRAPH}</Text>
         </div>
+        <ContentDisclaimer className={styles.hero__contentDisclaimer} />
       </div>
     </section>
   );

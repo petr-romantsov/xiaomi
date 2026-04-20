@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use 'sass:list';
 
-$dbreak: 2000px !default;
+$dbreak: 1996px !default;
 
 @function r2f($val) {
   @return math.div(math.round($val * 10000), 10000);
@@ -13,11 +13,7 @@ $dbreak: 2000px !default;
     @return 0;
   }
 
-  @if $dbreak > 1999px {
-    @return calc($px / 1280 * 2000);
-  } @else {
-    @return r2f(math.div($px, $dbreak) * 100vw);
-  }
+  @return r2f(math.div($px, $dbreak) * 100vw);
 }
 
 // Вспомогательная функция для генерации значения свойства из массива значений
@@ -33,10 +29,10 @@ $dbreak: 2000px !default;
   @return $result;
 }
 
-@mixin w2000 {
-  $dbreak: 2000px !global;
+@mixin w1996 {
+  $dbreak: 1996px !global;
 
-  @media (min-width >= 2000px) {
+  @media (width <= 1996px) {
     @content;
   }
 }
@@ -44,49 +40,31 @@ $dbreak: 2000px !default;
 @mixin w1280 {
   $dbreak: 1280px !global;
 
-  @media (width >= 1024px) and (width <= 1999px) {
+  @media (width <= 1280px) {
     @content;
   }
-
-  $dbreak: 2000px !global;
-}
-
-@mixin w768 {
-  $dbreak: 768px !global;
-
-  @media (width <= 1023px) {
-    @content;
-  }
-
-  $dbreak: 2000px !global;
 }
 
 @mixin w375 {
   $dbreak: 375px !global;
 
-  @media (width <= 767px) {
+  @media (width <= 768px) {
     @content;
   }
-
-  $dbreak: 2000px !global;
 }
 
 @mixin container {
   margin: 0 auto;
   padding: 0 100px;
-  max-width: 2000px;
+  max-width: 1996px;
   width: 100%;
 
-  @include w2000 {
+  @include w1996 {
     padding: 0 vw(100px);
   }
 
   @include w1280 {
     padding: 0 vw(100px);
-  }
-
-  @include w768 {
-    padding: 0 vw(40px);
   }
 
   @include w375 {
@@ -95,15 +73,11 @@ $dbreak: 2000px !default;
 }
 
 @mixin all-breakpoints($property, $values...) {
-  @include w2000 {
+  @include w1996 {
     #{$property}: generate-value($values);
   }
 
   @include w1280 {
-    #{$property}: generate-value($values);
-  }
-
-  @include w768 {
     #{$property}: generate-value($values);
   }
 

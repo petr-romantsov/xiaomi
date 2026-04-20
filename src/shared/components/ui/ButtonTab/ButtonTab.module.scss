@@ -7,7 +7,7 @@
   color: var(--color-text-white);
   font-family: var(--font-family-pt-mono);
   font-weight: 700;
-  font-size: vw(18px);
+  font-size: 18px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 
@@ -25,9 +25,9 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: vw(-2px);
+    bottom: -2px;
     width: 100%;
-    height: vw(1px);
+    height: 1px;
     background-color: var(--color-text-white);
     transform: scaleX(1);
     transform-origin: center;
@@ -41,8 +41,8 @@
 
   &_active {
     &::after {
-      height: vw(8px);
-      bottom: vw(-4px);
+      height: 8px;
+      bottom: -4px;
       background-color: var(--color-text-pink);
 
       @include all-breakpoints(height, 8px);
