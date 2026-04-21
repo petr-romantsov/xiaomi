@@ -30,7 +30,7 @@
     @include all-breakpoints(left, 0);
 
     #{$p}__left {
-      height: vw(300px);
+      height: 300px;
       aspect-ratio: 427 / 300;
 
       @include all-breakpoints(height, 300px);
@@ -41,14 +41,14 @@
     }
 
     #{$p}__right {
-      top: vw(0);
+      top: 0;
 
       @include all-breakpoints(top, 0);
     }
   }
 
   &__left {
-    height: vw(373px);
+    height: 373px;
     aspect-ratio: 529 / 373;
     overflow: hidden;
 
@@ -66,8 +66,8 @@
 
   &__right {
     position: relative;
-    top: vw(-102px);
-    height: vw(400px);
+    top: -102px;
+    height: 400px;
     aspect-ratio: 210 / 400;
     overflow: hidden;
 

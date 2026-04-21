@@ -36,6 +36,8 @@
     @include w375 {
       top: unset;
       flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
       padding: 0;
       padding-top: vw(380px);
       height: auto;
@@ -124,6 +126,10 @@
 
     &_first {
       @include all-breakpoints(padding-bottom, 96px);
+
+      @include w375 {
+        width: 100%;
+      }
     }
   }
 

@@ -1,0 +1,18 @@
+.link {
+  font-family: var(--font-family-pt-mono);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  color: var(--color-text-pink);
+
+  @include transit(color);
+  @include all-breakpoints(font-size, 14px);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--color-text-white);
+    }
+  }
+}

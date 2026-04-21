@@ -9,12 +9,12 @@
   border: none;
   background-color: transparent;
   font-family: var(--font-family-pt-mono);
-  font-size: vw(16px);
+  font-size: 16px;
   font-weight: 700;
   color: var(--color-text-white);
   text-transform: uppercase;
   text-decoration: underline;
-  text-underline-offset: vw(4px);
+  text-underline-offset: 4px;
   cursor: pointer;
 
   @include all-breakpoints(font-size, 16px);

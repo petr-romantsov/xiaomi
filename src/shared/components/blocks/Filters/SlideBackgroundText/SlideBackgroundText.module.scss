@@ -6,16 +6,19 @@
   top: 50%;
   left: 50%;
   width: 100%;
+  max-width: 1084px;
   transform: translate(-50%, calc(-50% - vw(60px)));
   z-index: 0;
   letter-spacing: -7%;
 
   @include w1996 {
+    max-width: vw(1084px);
     transform: translate(-50%, calc(-50% - vw(60px)));
   }
 
   @include w1280 {
     transform: translate(-50%, calc(-50% - vw(60px)));
+    max-width: 100vw;
   }
 
   @include w375 {
@@ -24,7 +27,7 @@
 
   &__letter {
     font-family: var(--font-family-drone-ranger-pro);
-    font-size: vw(280px);
+    font-size: 280px;
     line-height: 100%;
     font-weight: 700;
     color: transparent;
@@ -42,6 +45,5 @@
     @include w1280 {
       font-size: vw(280px);
     }
-
   }
 }

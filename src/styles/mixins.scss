@@ -112,7 +112,7 @@ $dbreak: 1996px !default;
 // транзишены
 @mixin transit($tag...) {
   transition-timing-function: ease-in-out;
-  transition-duration: 350ms;
+  transition-duration: 250ms;
   transition-property: $tag;
 }
 

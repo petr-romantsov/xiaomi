@@ -1,14 +1,37 @@
 .filters {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 725px;
 
   @include container;
+
+  @include w1996 {
+    height: vw(725px);
+  }
+
+  @include w1280 {
+    height: vw(710px);
+  }
 
   @include w375 {
     padding-top: vw(90px);
     align-items: flex-start;
+    height: auto;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 1084px;
+
+    @include all-breakpoints(width, 1084px);
+
+    @include w375 {
+      align-items: flex-start;
+      width: 100%;
+    }
   }
 
   &__tabsWrapper {
@@ -16,8 +39,8 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: vw(10px);
-    width: vw(468px);
+    gap: 10px;
+    width: 468px;
     z-index: 1;
 
     @include all-breakpoints(gap, 10px);
@@ -33,8 +56,8 @@
 
   &__slider {
     z-index: 0;
-    height: vw(500px);
-    top: vw(-60px);
+    height: 500px;
+    top: -60px;
 
     @include all-breakpoints(top, -60px);
     @include all-breakpoints(height, 500px);
@@ -46,19 +69,83 @@
 
   &__sliderControls {
     position: absolute;
-    bottom: vw(105px);
+    bottom: 105px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-right: vw(213px);
+    padding-right: 53px;
 
-    @include all-breakpoints(padding-right, 213px);
     @include all-breakpoints(bottom, 105px);
+
+    @include w1996 {
+      padding-right: vw(53px);
+    }
+
+    @include w1280 {
+      padding-right: vw(97px);
+    }
 
     @include w375 {
       padding-right: 0;
       bottom: 0;
       justify-content: flex-start;
     }
+  }
+
+  &__contentDisclaimer {
+    position: absolute;
+    top: 460px;
+    left: 715px;
+
+    @include w1996 {
+      left: vw(715px);
+      top: vw(460px);
+    }
+
+    @include w1280 {
+      left: vw(715px);
+      top: vw(460px);
+    }
+
+    @include w375 {
+      display: none;
+    }
+  }
+
+  &__purchaseLinks {
+    position: absolute;
+    left: 700px;
+    top: 490px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+
+    @include all-breakpoints(gap, 16px);
+    @include all-breakpoints(left, 700px);
+    @include all-breakpoints(top, 490px);
+
+    @include w375 {
+      display: none;
+    }
+  }
+
+  &__purchaseImageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 63px;
+    height: 134px;
+
+    @include all-breakpoints(width, 63px);
+    @include all-breakpoints(height, 134px);
+
+    img {
+      @include contain-img(contain);
+    }
+  }
+
+  &__purchaseLink {
+    max-width: 106px;
   }
 }

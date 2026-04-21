@@ -12,8 +12,8 @@
   }
 
   svg {
-    width: vw(32px);
-    height: vw(32px);
+    width: 32px;
+    height: 32px;
 
     @include all-breakpoints(width, 32px);
     @include all-breakpoints(height, 32px);

@@ -16,7 +16,7 @@ export function Backstage() {
 
   const handleNextSlide = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % backstageData.length);
-  }, [activeIndex, backstageData]);
+  }, []);
 
   return (
     <section className={styles.backstage}>

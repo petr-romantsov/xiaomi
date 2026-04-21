@@ -42,6 +42,7 @@ import filtersImage2 from './filters/filtersImg2.png';
 import filtersImage3 from './filters/filtersImg3.png';
 import filtersImage4 from './filters/filtersImg4.png';
 import goldvibesBack from './filters/gold-vibes-back.avif';
+import phoneImage from './filters/phone.png';
 import mainTitleMob from './firstblock/main-title-mob.svg';
 import mainTitle from './firstblock/main-title.png';
 import modelImg from './hero/Mi10T.png';
@@ -118,4 +119,5 @@ export {
   headerPoster,
   videoBlockPoster,
   contestPoster,
+  phoneImage,
 };

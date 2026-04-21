@@ -32,7 +32,7 @@ export const Collection = () => {
   return (
     <section className={styles.collections}>
       {!!collectionsData.length && (
-        <>
+        <div className={styles.collections__container}>
           <div className={styles.collections__tabsWrapper}>
             <TitleWithCounter
               title="КОЛЛЕКЦИИ"
@@ -83,7 +83,7 @@ export const Collection = () => {
               {texts.COLLECTIONS_FOURTH_PARAGRAPH}
             </Text>
           </div>
-        </>
+        </div>
       )}
     </section>
   );

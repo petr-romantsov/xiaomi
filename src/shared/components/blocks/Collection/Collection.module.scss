@@ -1,13 +1,42 @@
 .collections {
-  position: relative;
   margin: 0 auto;
-  max-width: 2000px;
+  max-width: 1996px;
   width: 100%;
-  height: 1124px;
-  padding: 0 107px 0 0;
+  padding: 0 65px 0 0;
 
-  @include all-breakpoints(padding, 0, 107px, 0, 0);
-  @include all-breakpoints(height, 1124px);
+  @include w1996 {
+    padding: 0 vw(60px) 0 0;
+  }
+
+  @include w1280 {
+    padding: 0 vw(195px) 0 0;
+  }
+
+  @include w375 {
+    padding: vw(32px) 0 vw(157px);
+  }
+
+  &__container {
+    position: relative;
+    width: 1173px;
+    height: 1124px;
+    margin: 0 auto;
+
+    @include all-breakpoints(height, 1124px);
+
+    @include w1996 {
+      width: vw(1173px);
+    }
+
+    @include w1280 {
+      width: vw(1084px);
+    }
+
+    @include w375 {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   @include w375 {
     padding: vw(32px) 0 vw(157px);
@@ -44,7 +73,7 @@
   }
 
   &__sliderControls {
-    padding-left: vw(205px);
+    padding-left: 205px;
 
     @include w1996 {
       padding-left: vw(205px);
@@ -63,19 +92,16 @@
   &__description {
     position: absolute;
     right: 0;
-    top: vw(450px);
-    margin-right: vw(215px);
-    max-width: vw(318px);
+    top: 450px;
+    max-width: 318px;
 
     @include all-breakpoints(max-width, 318px);
 
     @include w1996 {
-      margin-right: vw(215px);
       top: vw(450px);
     }
 
     @include w1280 {
-      margin-right: vw(215px);
       top: vw(450px);
     }
 
@@ -85,13 +111,13 @@
     }
 
     &Item:nth-child(-n + 2) {
-      margin-bottom: vw(20px);
+      margin-bottom: 20px;
 
       @include all-breakpoints(margin-bottom, 20px);
     }
 
     &Item_pink {
-      margin-top: vw(46px);
+      margin-top: 46px;
 
       @include all-breakpoints(margin-top, 46px);
 

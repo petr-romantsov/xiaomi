@@ -11,17 +11,14 @@
   }
 
   &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    @include contain-img(cover);
   }
 
   &_01,
   &_02 {
     #{$p}__imageWrapper {
       &:nth-of-type(2) {
-        top: v-4px;
+        top: -4px;
         right: 0;
         width: 383px;
         height: 288px;
@@ -30,7 +27,21 @@
         @include all-breakpoints(width, 383px);
         @include all-breakpoints(height, 288px);
         @include all-breakpoints(top, -4px);
-        @include all-breakpoints(right, 0);
+
+        @include w1996 {
+          right: vw(0);
+        }
+
+        @include w1280 {
+          right: vw(-80px);
+        }
+
+        @include w375 {
+          width: vw(375px);
+          height: vw(288px);
+          right: 0;
+          top: 0;
+        }
       }
 
       &:nth-of-type(3) {
@@ -69,16 +80,6 @@
 
         @include w375 {
           display: none;
-        }
-      }
-
-      &:nth-of-type(2) {
-        @include w375 {
-          width: 375px;
-          height: 288px;
-          right: unset;
-          left: 0;
-          top: 0;
         }
       }
 
@@ -173,8 +174,8 @@
         @include all-breakpoints(height, 349px);
 
         @include w375 {
-          width: 219px;
-          height: 292px;
+          width: vw(219px);
+          height: vw(292px);
           left: 0;
           top: 0;
         }
@@ -290,8 +291,8 @@
         @include all-breakpoints(height, 247px);
 
         @include w375 {
-          width: 105px;
-          height: 148px;
+          width: vw(105px);
+          height: vw(148px);
           left: unset;
           top: 0;
           right: 0;
@@ -412,8 +413,8 @@
         @include all-breakpoints(height, 154px);
 
         @include w375 {
-          width: 105px;
-          height: 145px;
+          width: vw(105px);
+          height: vw(145px);
           left: unset;
           top: vw(145px);
           right: 0;

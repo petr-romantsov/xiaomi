@@ -2,20 +2,21 @@
   @include container;
 
   &__content {
-    padding-bottom: vw(190px);
-    width: vw(854px);
+    padding-bottom: 190px;
+    width: 854px;
     margin: 0 auto;
 
     @include all-breakpoints(width, 854px);
     @include all-breakpoints(padding-bottom, 190px);
 
     @include w375 {
+      width: 100%;
       padding: vw(56px) 0 vw(100px);
     }
   }
 
   &__title {
-    margin-bottom: vw(32px);
+    margin-bottom: 32px;
 
     @include all-breakpoints(margin-bottom, 32px);
 
@@ -27,9 +28,9 @@
   &__text {
     display: flex;
     flex-direction: column;
-    gap: vw(25px);
-    margin-bottom: vw(47px);
-    max-width: vw(615px);
+    gap: 25px;
+    margin-bottom: 47px;
+    max-width: 615px;
 
     @include all-breakpoints(gap, 25px);
     @include all-breakpoints(margin-bottom, 47px);
@@ -44,8 +45,8 @@
 
   &__links {
     display: flex;
-    gap: vw(24px);
-    margin-bottom: vw(90px);
+    gap: 24px;
+    margin-bottom: 90px;
 
     @include all-breakpoints(gap, 24px);
     @include all-breakpoints(margin-bottom, 90px);
@@ -67,17 +68,17 @@
 
   &__socialLinks {
     display: flex;
-    gap: vw(16px);
+    gap: 16px;
     width: 100%;
     flex-wrap: wrap;
-    padding: vw(20px) 0;
+    padding: 20px 0;
 
     @include all-breakpoints(padding, 20px, 0);
     @include all-breakpoints(gap, 16px);
   }
 
   &__copy {
-    margin-top: vw(20px);
+    margin-top: 20px;
 
     @include all-breakpoints(margin-top, 20px);
   }
