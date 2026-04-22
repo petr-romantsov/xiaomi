@@ -1,12 +1,77 @@
-# React + Vite
+# Xiaomi x Aytlo Landing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Скриншот проекта](src/assets/images/preview.png)
 
-Currently, two official plugins are available:
+Одностраничный промо-проект на React + Vite с адаптивной версткой, анимированными блоками и большим количеством графических декоративных элементов.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Клонирование и запуск
 
-## Expanding the ESLint configuration
+### 1. Клонируйте репозиторий
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
+cd xiaomi
+```
+
+### 2. Установите зависимости
+
+```bash
+npm install
+```
+
+### 3. Запустите проект в режиме разработки
+
+```bash
+npm run start
+```
+
+После запуска приложение будет доступно по адресу `http://localhost:5173`.
+
+## Доступные команды
+
+- `npm run start` - запуск dev-сервера Vite
+- `npm run build` - production-сборка
+- `npm run preview` - локальный просмотр production-сборки
+- `npm run lint` - проверка JavaScript/JSX через ESLint
+- `npm run lint:fix` - автоисправление проблем ESLint
+- `npm run stylelint` - проверка SCSS через Stylelint
+- `npm run stylelint:fix` - автоисправление SCSS-стилей
+- `npm run format` - форматирование Prettier
+
+## Технологии
+
+- `React 19`
+- `Vite 6`
+- `Sass/SCSS`
+- `motion` (анимации)
+- `clsx` (условные классы)
+- `vite-plugin-svgr` (импорт SVG как React-компонентов)
+- `ESLint + Prettier + Stylelint`
+- `Husky + lint-staged` (pre-commit проверки)
+
+## Особенности проекта
+
+- Адаптивная верстка с собственными SCSS-миксинами и брейкпоинтами.
+- Компонентная структура: блоки, общие UI-компоненты и общие утилиты.
+- Подключены алиасы путей:
+  - `@` -> `src`
+  - `@styles` -> `src/styles`
+- Глобальные SCSS-переменные и миксины подключаются автоматически через конфиг Vite.
+- Подготовлен pre-commit пайплайн: для измененных файлов запускаются линтеры и форматирование.
+
+## Структура проекта (кратко)
+
+```text
+src/
+  assets/              # изображения, иконки, медиа
+  shared/
+    components/        # блоки страницы, общие и UI-компоненты
+    constants/         # текстовые и конфигурационные константы
+  styles/              # глобальные стили, миксины, переменные
+  App.jsx              # сборка секций страницы
+  main.jsx             # входная точка приложения
+```
+
+## Примечания
+
+- Для стабильной работы используйте актуальную LTS-версию Node.js.

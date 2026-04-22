@@ -12,7 +12,6 @@
     "format": "prettier --write .",
     "stylelint": "stylelint '**/*.scss'",
     "stylelint:fix": "stylelint **/*.scss --fix",
-    "test": "echo \"No tests specified\" && exit 0",
     "prepare": "husky"
   },
   "dependencies": {
