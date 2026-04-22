@@ -41,10 +41,15 @@
     justify-content: center;
     gap: 10px;
     width: 468px;
+    margin-right: 150px;
     z-index: 1;
 
     @include all-breakpoints(gap, 10px);
     @include all-breakpoints(width, 468px);
+
+    @include w1996 {
+      margin-right: vw(150px);
+    }
 
     @include w375 {
       flex-direction: column;
@@ -55,7 +60,6 @@
   }
 
   &__slider {
-    z-index: 0;
     height: 500px;
     top: -60px;
 
@@ -95,10 +99,10 @@
   &__contentDisclaimer {
     position: absolute;
     top: 460px;
-    left: 715px;
+    left: 640px;
 
     @include w1996 {
-      left: vw(715px);
+      left: vw(640px);
       top: vw(460px);
     }
 
@@ -114,7 +118,7 @@
 
   &__purchaseLinks {
     position: absolute;
-    left: 700px;
+    left: 630px;
     top: 490px;
     display: flex;
     flex-direction: column;
@@ -122,7 +126,7 @@
     align-items: flex-start;
 
     @include all-breakpoints(gap, 16px);
-    @include all-breakpoints(left, 700px);
+    @include all-breakpoints(left, 630px);
     @include all-breakpoints(top, 490px);
 
     @include w375 {

@@ -8,10 +8,12 @@
 
   @include w1280 {
     height: vw(661px);
+    z-index: 20;
   }
 
   @include w375 {
     height: vw(197px);
+    z-index: 10;
   }
 
   &__contentDisclaimer {

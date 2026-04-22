@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import { aytlo, modelImg, phone } from '@/assets/images';
-import { ContentDisclaimer, NavLink, Text } from '@/shared/components';
+import { ContentDisclaimer, Link, Text } from '@/shared/components';
 import { texts } from '@/shared/constants';
 
 import styles from './Hero.module.scss';
@@ -24,9 +24,9 @@ export const Hero = () => {
             alt="Изображение телефона Mi 10T"
           />
         </div>
-        <NavLink className={styles.hero__link} link="#" color="pink">
+        <Link className={styles.hero__link} link="#" color="pink">
           ПОДРОБНЕЕ О СЕРИИ Mi 10T
-        </NavLink>
+        </Link>
         <div className={styles.hero__text}>
           <img
             className={styles.hero__aytlo}

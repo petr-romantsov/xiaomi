@@ -13,7 +13,6 @@
     width: 1084px;
     height: 690px;
     padding: 48px 101px 99px 118px;
-    z-index: 1;
 
     & > * {
       z-index: 1;
@@ -71,7 +70,7 @@
     top: -85px;
     left: 102px;
     width: 417px;
-    z-index: 2;
+    z-index: 20;
 
     @include w1996 {
       width: vw(417px);
@@ -90,6 +89,7 @@
       top: vw(245px);
       left: 50%;
       transform: translateX(-50%);
+      z-index: 10;
     }
   }
 
@@ -115,6 +115,7 @@
     flex-direction: column;
     gap: 30px;
     width: 216px;
+    z-index: 20;
 
     @include all-breakpoints(width, 216px);
     @include all-breakpoints(gap, 30px);
@@ -164,6 +165,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
+    text-align: start;
 
     @include all-breakpoints(top, 95px);
     @include all-breakpoints(font-size, 14px);
@@ -171,8 +173,8 @@
     @include w375 {
       position: absolute;
       font-size: vw(11px);
-      top: vw(185px);
-      width: vw(64px);
+      top: vw(190px);
+      width: vw(75px);
       text-align: end;
       line-height: 130%;
     }

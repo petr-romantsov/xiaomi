@@ -3,6 +3,7 @@
 
   @include w375 {
     padding-top: vw(46px);
+    z-index: 20;
   }
 
   &__videoWrapper {

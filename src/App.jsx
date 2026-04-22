@@ -9,6 +9,7 @@ import {
   Footer,
   Header,
   Hero,
+  VerticalText,
   VideoBlock,
 } from '@/shared/components';
 
@@ -25,6 +26,7 @@ function App() {
       <Collection />
       <VideoBlock />
       <Backstage />
+      <VerticalText />
       <Footer />
     </>
   );

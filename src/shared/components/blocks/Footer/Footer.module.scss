@@ -51,6 +51,11 @@
     @include all-breakpoints(gap, 24px);
     @include all-breakpoints(margin-bottom, 90px);
 
+    @include w1280 {
+      position: relative;
+      z-index: 20;
+    }
+
     @include w375 {
       flex-direction: column;
       gap: vw(16px);
@@ -60,6 +65,7 @@
 
   &__link {
     width: calc(50% - (vw(25px) / 2));
+    background-color: var(--color-bg-black);
 
     @include w375 {
       width: 100%;

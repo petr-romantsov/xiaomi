@@ -29,6 +29,11 @@
 
     @include all-breakpoints(gap, 22px);
 
+    @include w1280 {
+      position: relative;
+      z-index: 20;
+    }
+
     @include w375 {
       gap: vw(33px);
     }

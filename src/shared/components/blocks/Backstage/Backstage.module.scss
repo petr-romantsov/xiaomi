@@ -5,6 +5,10 @@
   @include container;
   @include all-breakpoints(top, -90px);
 
+  @include w1280 {
+    z-index: 20;
+  }
+
   @include w375 {
     top: unset;
     padding-top: vw(80px);
@@ -12,6 +16,7 @@
     background-size: 100%;
     background-position: center top vw(195px);
     background-repeat: no-repeat;
+    z-index: 10;
   }
 
   &__container {

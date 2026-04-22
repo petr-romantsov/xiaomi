@@ -27,3 +27,4 @@ export * from './blocks/Backstage/BackstageSlide/BackstageSlide';
 export * from './blocks/Contest/Contest';
 export * from './common/ContentDisclaimer/ContentDisclaimer';
 export * from './ui/Link/Link';
+export * from './blocks/VerticalText/VerticalText';

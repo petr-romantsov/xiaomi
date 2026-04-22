@@ -32,6 +32,7 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -40%);
+    z-index: 20;
 
     @include w1996 {
       width: vw(852px);

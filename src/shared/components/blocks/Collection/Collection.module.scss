@@ -64,6 +64,8 @@
     }
 
     @include w1280 {
+      position: relative;
+      z-index: 20;
       padding-left: vw(205px);
     }
 
@@ -103,6 +105,7 @@
 
     @include w1280 {
       top: vw(450px);
+      z-index: 20;
     }
 
     @include w375 {
@@ -122,7 +125,9 @@
       @include all-breakpoints(margin-top, 46px);
 
       @include w375 {
+        position: relative;
         margin-top: vw(55px);
+        z-index: 20;
       }
     }
   }

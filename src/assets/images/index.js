@@ -58,9 +58,13 @@ import MiIcon from './svg/mi.svg?react';
 import PlayIcon from './svg/play-icon.svg?react';
 import TiktokIcon from './svg/tiktok.svg?react';
 import VkIcon from './svg/vk.svg?react';
+import verticalImg2 from './verticalImage2.png';
+import verticalImg from './verticalImage.png';
 
 export {
   backstageBg,
+  verticalImg,
+  verticalImg2,
   collection1main,
   collection1pants,
   collection1secondary,
