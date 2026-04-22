@@ -87,4 +87,25 @@
       width: 100%;
     }
   }
+
+  &__contentDisclaimer {
+    position: absolute;
+    left: 890px;
+    top: 193px;
+    z-index: 20;
+
+    @include w1996 {
+      left: vw(890px);
+      top: vw(193px);
+    }
+
+    @include w1280 {
+      left: vw(535px);
+      top: vw(190px);
+    }
+
+    @include w375 {
+      display: none;
+    }
+  }
 }

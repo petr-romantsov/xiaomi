@@ -7,7 +7,7 @@ import styles from './Concept.module.scss';
 
 export const Concept = () => {
   return (
-    <section className={styles.concept}>
+    <section id="concept" className={styles.concept}>
       <div className={styles.concept__content}>
         <div className={styles.concept__descr}>
           <SectionTitle className={styles.concept__title} color="pink">

@@ -8,7 +8,7 @@ import styles from './Hero.module.scss';
 
 export const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section id="about" className={styles.hero}>
       <div className={styles.hero__content}>
         <div className={styles.hero__model}>
           <img className={styles.hero__modelImg} src={modelImg} alt="Mi 10T" />

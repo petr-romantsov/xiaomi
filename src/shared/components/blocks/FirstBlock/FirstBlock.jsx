@@ -1,12 +1,13 @@
 import { mainTitle, mainTitleMob } from '@/assets/images';
 import { headerBgVideo } from '@/assets/videos';
-import { Text, VideoContainer } from '@/shared/components';
+import { ContentDisclaimer, Text, VideoContainer } from '@/shared/components';
 
 import styles from './FirstBlock.module.scss';
 
 export const FirstBlock = () => {
   return (
     <section className={styles.firstBlock}>
+      <ContentDisclaimer className={styles.firstBlock__contentDisclaimer} />
       <VideoContainer
         className={styles.firstBlock__video}
         video={headerBgVideo}

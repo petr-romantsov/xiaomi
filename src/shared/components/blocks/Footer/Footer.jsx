@@ -8,7 +8,7 @@ import styles from './Footer.module.scss';
 
 export const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="where-buy" className={styles.footer}>
       <div className={styles.footer__content}>
         <SectionTitle className={styles.footer__title} color="pink">
           ГДЕ КУПИТЬ
